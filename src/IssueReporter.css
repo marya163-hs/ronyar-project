@@ -1,0 +1,56 @@
+.issue-launch {
+  position: fixed;
+  inset-inline-end: 18px;
+  bottom: 65px;
+  z-index: 38;
+  padding: 8px 14px;
+  border: 1px solid #86aba8;
+  border-radius: 10px;
+  background: white;
+  color: #075e59;
+  font: inherit;
+  cursor: pointer;
+}
+.issue-content {
+  line-height: 1.9;
+  white-space: normal;
+}
+.issue-content fieldset {
+  border: 0;
+  padding: 0;
+  display: grid;
+  gap: 14px;
+}
+.issue-content label {
+  display: grid;
+  gap: 6px;
+}
+.issue-content input:not([type="checkbox"]),
+.issue-content textarea {
+  font: inherit;
+  padding: 10px;
+  border: 1px solid #b7c9c7;
+  border-radius: 8px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.issue-content textarea {
+  min-height: 95px;
+}
+.issue-content article,
+.issue-challenge {
+  border: 1px solid #bdd6d0;
+  padding: 16px;
+  margin-block: 14px;
+  border-radius: 12px;
+}
+.issue-content p {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+.issue-content button {
+  margin: 5px;
+}
+.issue-content small {
+  overflow-wrap: anywhere;
+}

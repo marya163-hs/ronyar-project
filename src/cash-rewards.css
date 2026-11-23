@@ -1,0 +1,1 @@
+.cash-reward-request{display:grid;gap:12px;max-width:420px;margin-top:16px}.cash-reward-request label{display:grid;gap:6px}.cash-reward-request label:has(input[type=checkbox]){display:flex;gap:8px;align-items:flex-start;line-height:1.8}.cash-reward-request input[type=checkbox]{width:18px;height:18px;min-height:18px;flex:0 0 18px;margin:4px 0}

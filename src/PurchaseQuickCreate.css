@@ -1,0 +1,9 @@
+.purchase-inline-create{justify-self:start;display:inline-flex;align-items:center;gap:6px;min-height:42px;border-style:dashed;color:#006c7b;background:#f1fafb;font-weight:700}
+.purchase-quick-create .quick-master-note{font-size:.82rem;line-height:1.9;padding:12px 14px;border-radius:12px;background:#f1f7fa;color:#496578}
+.purchase-quick-create .quick-matches{margin:12px 0;padding:14px;border:1px solid #b9dcdf;border-radius:14px;background:#f3fbfb}
+.purchase-quick-create .quick-matches>p{font-size:.83rem;margin:8px 0;color:#496578}
+.purchase-quick-create .quick-matches ul{list-style:none;padding:0;margin:10px 0 0;display:grid;gap:8px}
+.purchase-quick-create .quick-matches button{width:100%;min-height:44px;text-align:start;background:#fff;border:1px solid #c6dcdf;border-radius:10px;padding:9px 12px;color:#06495b}
+.purchase-quick-create .quick-refresh{align-self:flex-start;margin:10px 0;min-height:42px}
+.purchase-quick-create .product-form-fields{padding-bottom:12px}
+@media(max-width:640px){.purchase-inline-create{width:100%;justify-content:center}.purchase-quick-create .form-actions{flex-wrap:wrap}.purchase-quick-create .form-actions button{min-height:46px;flex:1 1 100%}}

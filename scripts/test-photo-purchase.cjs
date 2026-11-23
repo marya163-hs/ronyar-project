@@ -1,0 +1,16 @@
+const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict'),ts=require('typescript');
+require.extensions['.ts']=(m,f)=>m._compile(ts.transpileModule(fs.readFileSync(f,'utf8'),{compilerOptions:{target:ts.ScriptTarget.ES2022,module:ts.ModuleKind.CommonJS}}).outputText,f);
+const resolve=require('node:module')._resolveFilename;require('node:module')._resolveFilename=function(r,p,...a){if(r.startsWith('.')&&p?.filename.endsWith('.ts')){const f=path.resolve(path.dirname(p.filename),r)+'.ts';if(fs.existsSync(f))return f;}return resolve.call(this,r,p,...a);};
+const {photoMoney,photoTotal,photoDate}=require('../src/photoPurchasePlan.ts');let n=0;const test=(name,f)=>{f();n++;console.log('PASS '+name);};
+for(const [s,c,v] of [['۱۰۰٬۰۰۰','TOMAN','1000000'],['0.1','TOMAN','1'],['0','IRR','0'],['1000','IRR','1000'],['999999999999999999','TOMAN','9999999999999999990'],['1.123456','IRR','1.123456']])test('exact conversion '+s,()=>assert.equal(photoMoney(s,c),v));
+for(const v of ['', '1e6','-1','1.1234567'])test('reject unknown money '+v,()=>assert.throws(()=>photoMoney(v,'IRR')));
+for(const v of ['1,23','1,234٬567','1,,000','0,123','1234,567','1.234,50','1,000.12,3','1،000'])test('reject malformed grouping '+v,()=>assert.throws(()=>photoMoney(v,'IRR')));
+for(const [v,expected] of [['۱٬۲۳۴٫۵۰','1234.5'],['١,٢٣٤','1234']])test('valid grouped input remains exact '+v,()=>assert.equal(photoMoney(v,'IRR'),expected));
+test('unknown currency',()=>assert.throws(()=>photoMoney('10','')));
+test('valid Jalali',()=>assert.equal(photoDate('۱۴۰۵/۰۸/۰۴'),'2026-10-26'));
+test('invalid date stays unknown',()=>assert.equal(photoDate('1405/13/40'),''));
+test('missing date is not today',()=>assert.equal(photoDate(null),''));
+test('tax discount exact',()=>assert.equal(photoTotal([{quantity:'3',unitPrice:'10000',discountAmount:'3000',taxRate:'0.1'}],'TOMAN',0),'297000'));
+test('missing discount is not zero',()=>assert.throws(()=>photoTotal([{quantity:'3',unitPrice:'100',discountAmount:'',taxRate:'0'}],'IRR',0)));
+test('fractional precision blocked',()=>assert.throws(()=>photoTotal([{quantity:'1.5',unitPrice:'1',discountAmount:'0',taxRate:'0'}],'IRR',0)));
+console.log(`PASS ${n} photo client checks`);

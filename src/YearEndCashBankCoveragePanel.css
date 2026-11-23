@@ -1,0 +1,18 @@
+.ye-coverage { width: 100%; min-width: 0; }
+.ye-coverage .ye-coverage-actions { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 14px; margin-block: 12px 18px; }
+.ye-coverage .ye-coverage-actions p { margin: 0; flex: 1 1 270px; }
+.ye-coverage .ye-coverage-actions button { width: auto; flex: 0 0 auto; }
+.ye-coverage .ye-coverage-info { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin-block: 12px 20px; }
+.ye-coverage .ye-coverage-info > div { display: flex; flex-direction: column; gap: 9px; border: 1px solid var(--border, #d8e0e7); background: var(--surface-soft, #f8fafc); border-radius: 13px; padding: 15px; min-width: 0; }
+.ye-coverage .ye-coverage-info span { font-size: .83rem; opacity: .8; }
+.ye-coverage .ye-coverage-info strong { font-size: 1.18rem; font-variant-numeric: tabular-nums; }
+.ye-coverage .ye-coverage-table td { vertical-align: middle; }
+.ye-coverage .ye-coverage-table td small { display: block; margin-top: 5px; font-size: .78rem; opacity: .7; }
+.ye-coverage .ye-coverage-state { display: inline-block; padding: 5px 10px; border: 1px solid; border-radius: 9px; font-size: .84rem; font-weight: 600; white-space: normal; }
+.ye-coverage .ye-coverage-ok { color: #0c3a6f; border-color: #82d1f3; background: #f0f9fd; }
+.ye-coverage .ye-coverage-pending { color: #854d0e; border-color: #fcd34d; background: #fffbeb; }
+.ye-coverage .ye-coverage-problem { color: #991b1b; border-color: #fca5a5; background: #fef2f2; }
+.ye-coverage .ye-coverage-muted { color: #475569; border-color: #cbd5e1; background: #f8fafc; }
+.ye-coverage .ye-coverage-disclaimer { margin-top: 16px; font-size: .86rem; opacity: .75; }
+@media (max-width: 850px) { .ye-coverage .ye-coverage-info { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 480px) { .ye-coverage .ye-coverage-info { grid-template-columns: minmax(0, 1fr); } }

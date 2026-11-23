@@ -1,0 +1,8 @@
+import './cash-rewards.css';
+import {useState} from 'react';
+import {requestCashReward,ApiError} from './api';
+export default function CashRewardRequest({businessId,id,onDone}:{businessId:string;id:string;onDone:()=>void}){
+ const [card,setCard]=useState(''),[holder,setHolder]=useState(''),[busy,setBusy]=useState(false),[error,setError]=useState(''),[confirmed,setConfirmed]=useState(false);
+ async function send(e:React.FormEvent){e.preventDefault();if(busy||!confirmed)return;setBusy(true);setError('');try{await requestCashReward(businessId,id,card,holder.trim());setCard('');setHolder('');onDone();}catch(e){setError(e instanceof ApiError&&e.code==='INVALID_BANK_CARD'?'شماره کارت معتبر نیست.':e instanceof ApiError&&e.code==='REWARD_OWNER_ONLY'?'فقط مالک فروشگاه می‌تواند درخواست تسویه بدهد.':'درخواست تأیید نشد؛ وضعیت جایزه را به‌روزرسانی کنید.');}finally{setBusy(false);}}
+ return <form onSubmit={e=>void send(e)} className="cash-reward-request"><label>شماره کارت به نام مالک<input inputMode="numeric" autoComplete="off" value={card} onChange={e=>setCard(e.target.value)} minLength={16} maxLength={24} required disabled={busy} dir="ltr"/></label><label>نام صاحب حساب<input value={holder} onChange={e=>setHolder(e.target.value)} minLength={3} maxLength={100} required disabled={busy}/></label><label><input type="checkbox" checked={confirmed} onChange={e=>setConfirmed(e.target.checked)} disabled={busy}/>مالک این حساب هستم و شماره کارت را بررسی کردم.</label>{error&&<p role="alert" className="notice error">{error}</p>}<button disabled={busy||!confirmed}>درخواست تسویه نقدی</button></form>;
+}

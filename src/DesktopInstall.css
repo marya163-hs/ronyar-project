@@ -1,0 +1,10 @@
+.desktop-install{margin-top:16px;display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;max-width:480px}
+.desktop-install-button{border:1px solid #c8d7d2;border-radius:12px;background:#f2f7f5;color:#123c35;padding:10px 16px;font:inherit;font-weight:700;cursor:pointer}
+.desktop-install-button:hover{background:#e3eee9}
+.desktop-install-button:focus-visible{outline:3px solid #567d70;outline-offset:3px}
+.desktop-install-button:disabled{opacity:.65;cursor:wait}
+.desktop-install-meta{font-size:12px;color:#52665e}
+.desktop-install details{flex-basis:100%;font-size:13px;color:#40594f;line-height:1.9}
+.desktop-install summary{cursor:pointer;width:fit-content}
+.desktop-install details p,.desktop-install>p{font-size:13px;line-height:1.9;margin:8px 0}
+@media print{.desktop-install{display:none}}

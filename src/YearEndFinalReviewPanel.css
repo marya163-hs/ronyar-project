@@ -1,0 +1,25 @@
+.ye-final { margin-block: 16px 22px; }
+.ye-final-actions { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px; }
+.ye-final-actions p { flex:1; min-width:200px; margin:0; }
+.ye-final-status { border:1px solid var(--border-color,#d9dfe5); border-right:4px solid var(--primary,#506477); border-radius:12px; padding:14px 16px; margin:14px 0; background:var(--surface-muted,#f8fafc); }
+.ye-final-status > div { display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:10px; }
+.ye-final-status strong { font-size:1.18rem; }
+.ye-final-status p { margin:8px 0 0; font-size:.9rem; }
+.ye-final-blocked { border-right-color:#be4444; }
+.ye-final-pending { border-right-color:#bc8428; }
+.ye-final-review-ready { border-right-color:#275892; }
+.ye-final-metrics { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:10px; margin:14px 0; }
+.ye-final-metrics > div { border:1px solid var(--border-color,#e1e5e9); border-radius:10px; padding:12px; display:flex; flex-direction:column; gap:6px; min-width:0; }
+.ye-final-metrics span { font-size:.82rem; opacity:.78; }
+.ye-final-metrics strong { font-size:1.12rem; font-variant-numeric:tabular-nums; }
+.ye-final-section { margin-block:18px 12px; }
+.ye-final-section h4 { margin:0 0 10px; font-size:1rem; }
+.ye-final-section ul { list-style:none; padding:0; margin:0; display:grid; gap:8px; }
+.ye-final-section li { border:1px solid var(--border-color,#e1e5e9); padding:10px 12px; border-radius:10px; }
+.ye-final-section li strong { margin-inline-end:10px; }
+.ye-final-section li p { margin:6px 0 0; line-height:1.75; font-size:.9rem; }
+.ye-final-source { font-size:.75rem; color:var(--text-secondary,#697586); }
+.ye-final-safety { display:flex; gap:10px 22px; flex-wrap:wrap; font-size:.86rem; border-top:1px solid var(--border-color,#ddd); padding-top:12px; }
+.ye-final-disclaimer { font-size:.83rem; line-height:1.8; opacity:.85; }
+@media(max-width:850px) { .ye-final-metrics { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media(max-width:480px) { .ye-final-metrics { grid-template-columns:1fr 1fr; } .ye-final-status strong { font-size:1.05rem; } }

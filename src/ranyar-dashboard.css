@@ -1,0 +1,50 @@
+/* Operational dashboard: live totals first, assistant on demand. */
+.ranyar-overview{width:100%;padding-top:22px}
+.ranyar-overview .page-heading{margin-bottom:16px;gap:16px;align-items:center}
+.ranyar-overview .page-heading h1{font-size:24px;margin:0}
+.ranyar-overview .page-heading>div:first-child>.eyebrow,.ranyar-overview .page-heading>div:first-child>p{display:none}
+.ranyar-overview .filters{align-items:center;gap:8px}
+.ranyar-overview .filters label{min-width:145px;font-size:10px}
+.ranyar-overview .filters input{min-height:36px;margin-top:2px}
+.ranyar-overview .filters .secondary{min-height:36px;padding:6px 12px;font-size:11px}
+.ranyar-overview .jalali-date-hint{display:none}
+.ranyar-overview .report-caption{margin:0 0 10px;font-size:10px}
+.ranyar-overview .metric-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-bottom:16px}
+.ranyar-overview .metric{min-width:0;min-height:126px;padding:17px 18px;border-radius:14px;box-shadow:0 3px 16px #05274805}
+.ranyar-overview .metric>span{font-size:12px}
+.ranyar-overview .metric>strong{font-size:clamp(19px,2.1vw,28px);margin:7px 0;line-height:1.5;overflow-wrap:anywhere}
+.ranyar-overview .metric>p{font-size:10px;margin:0}
+.ranyar-overview .metric.featured{background:linear-gradient(115deg,#052748,#006b7d);color:white}
+.ranyar-overview .metric.featured>span,.ranyar-overview .metric.featured>p{color:#d5f5f7}
+.ranyar-overview .metric.featured>strong{color:white}
+.ranyar-overview .detail-grid{gap:12px;margin-top:0}
+.ranyar-overview .detail-card{padding:17px 18px;border-radius:14px}
+.ranyar-overview .detail-card h2{font-size:13px;margin-bottom:12px}
+.ranyar-overview .detail-card dl{margin:0}
+.ranyar-overview .detail-card dl>div{padding:8px 0;font-size:11px}
+.ranyar-overview .stock-card>strong{font-size:27px}
+.ranyar-overview .stock-card>p,.ranyar-overview .stock-card>.muted{font-size:10px}
+.ranyar-overview .dashboard-note{font-size:10px;margin:12px 0}
+.ranyar-overview .quick-actions{padding:13px 16px;gap:10px;margin:14px 0;border-radius:14px}
+.ranyar-overview .quick-actions strong{font-size:12px}
+.ranyar-overview .quick-action-buttons{gap:8px}
+.ranyar-overview .quick-action-buttons button{min-height:38px;padding:7px 14px;font-size:12px}
+.dashboard-assistant{border:1px solid #c7e2ec;border-radius:14px;background:white;margin:14px 0 0;overflow:hidden}
+.dashboard-assistant>summary{display:flex;align-items:center;gap:9px;padding:14px 17px;cursor:pointer;list-style:none;color:#052748;min-height:54px}
+.dashboard-assistant>summary::-webkit-details-marker{display:none}
+.dashboard-assistant>summary>span:first-child{color:#007d88;background:#e0f7f7;border-radius:9px;width:29px;height:29px;display:grid;place-items:center}
+.dashboard-assistant summary strong{font-size:13px}.assistant-summary-hint{font-size:11px;color:#627e92}.assistant-summary-action{font-size:11px;color:#007d88;margin-inline-start:auto}
+.dashboard-assistant[open] .assistant-summary-action{font-size:0}.dashboard-assistant[open] .assistant-summary-action:after{content:'بستن';font-size:11px}
+.dashboard-assistant .store-assistant-card{margin:0;border:0;border-top:1px solid #e3eff5;border-radius:0;padding:16px;box-shadow:none}
+.dashboard-assistant .store-assistant-card>h2,.dashboard-assistant .store-assistant-card>p:first-of-type{display:none}
+.dashboard-assistant textarea{min-height:68px;max-height:180px;font-size:12px}
+@media(min-width:1100px){.ranyar-overview .metric-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.ranyar-overview .detail-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:640px){
+ .topbar{padding:5px 12px;min-height:62px;gap:8px}.topbar .ranyar-brand img{width:48px;height:46px}.topbar .ranyar-brand strong{font-size:14px}.topbar .ranyar-brand span{display:none}.topbar .ranyar-brand{gap:3px}.topbar .user-area{gap:0}.topbar .user-area .text-button{font-size:10px;min-height:32px;padding:4px 8px}.topbar .store-context{order:0;flex:1;min-width:0;max-width:150px}.topbar .store-context>span{font-size:10px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.topbar .store-context label{font-size:0}.topbar .store-context select{width:100%;font-size:10px;min-height:32px}.topbar .menu-toggle{width:34px;min-width:34px;height:34px;min-height:34px;padding:6px}
+ .ranyar-overview{padding:14px 12px 26px}.ranyar-overview .page-heading{flex-direction:row;align-items:center;gap:10px;margin-bottom:10px}.ranyar-overview .page-heading h1{font-size:19px}.ranyar-overview .filters{gap:5px;flex-wrap:nowrap}.ranyar-overview .filters label{min-width:0;font-size:0}.ranyar-overview .filters .jalali-date-field{max-width:154px}.ranyar-overview .filters input{font-size:11px;min-height:34px;padding:5px 7px}.ranyar-overview .filters .secondary{font-size:10px;min-height:34px;padding:5px 7px}.ranyar-overview .filters small{display:none}.ranyar-overview .jalali-calendar-toggle{width:30px;min-width:30px;height:34px;font-size:19px}.ranyar-overview .report-caption{font-size:9px;margin-bottom:8px}
+ .ranyar-overview .metric-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-bottom:12px}.ranyar-overview .metric{min-height:110px;padding:12px 10px;border-radius:12px}.ranyar-overview .metric>span{font-size:10px}.ranyar-overview .metric>strong{font-size:19px;margin:6px 0}.ranyar-overview .metric>p{font-size:9px;line-height:1.6}.ranyar-overview .detail-grid{grid-template-columns:1fr;gap:8px}.ranyar-overview .detail-card{padding:12px 14px}.ranyar-overview .detail-card h2{margin-bottom:5px}.ranyar-overview .detail-card dl>div{padding:5px 0}.ranyar-overview .stock-card{display:grid;grid-template-columns:1fr auto;gap:3px 10px}.ranyar-overview .stock-card h2{margin:0}.ranyar-overview .stock-card>strong{grid-column:2;grid-row:1/3;font-size:27px}.ranyar-overview .stock-card>p{margin:0}.ranyar-overview .stock-card>.muted{grid-column:1/-1}
+ .ranyar-overview .quick-actions{padding:12px;display:block}.ranyar-overview .quick-actions>div:first-child{display:none}.ranyar-overview .quick-action-buttons{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;width:100%}.ranyar-overview .quick-action-buttons button{padding:7px 4px;font-size:11px;width:100%;min-height:39px}
+ .dashboard-assistant>summary{padding:11px 12px}.assistant-summary-hint{font-size:10px}.dashboard-assistant textarea{min-height:66px}
+}
+.ranyar-overview .filters small.muted{display:none}
+@media(max-width:640px){.ranyar-overview .quick-action-buttons{grid-template-columns:repeat(auto-fit,minmax(80px,1fr))}.ranyar-overview .quick-action-buttons .primary{grid-column:auto}}

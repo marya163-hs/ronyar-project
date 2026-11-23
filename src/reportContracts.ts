@@ -1,0 +1,9 @@
+import type { CashBalancePage, PartyBalancePage } from "./api";
+export type OperationalReportKind = "sales" | "purchases" | "receivables" | "payables" | "inventory" | "parties" | "cash";
+export type ReportFilters = { fromDate?: string; toDate?: string; settlementStatus?: string; warehouseId?: string; role?: "ALL" | "CUSTOMER" | "SUPPLIER" };
+type Page<T> = { currency: string; items: T[]; page: number; total: number; totalPages: number };
+export type SalesDailyReport = Page<{ documentDate: string; saleCount: number; returnCount: number; saleAmount: string; returnAmount: string; netAmount: string }> & { totalSales: string; totalReturns: string; netSales: string; saleCount: number; returnCount: number };
+export type PurchasesDailyReport = Page<{ documentDate: string; purchaseCount: number; returnCount: number; purchaseAmount: string; returnAmount: string; netAmount: string }> & { totalPurchases: string; totalReturns: string; netPurchases: string; purchaseCount: number; returnCount: number };
+export type SettlementReport = Page<{ id: string; number: string | null; documentDate: string; party: { id: string; name: string }; netTotal: string; netSettledAmount: string; remainingAmount: string; creditAmount: string; settlementStatus: string }> & { netTotal: string; netSettledAmount: string; remainingAmount: string; creditAmount: string };
+export type InventoryValueReport = Page<{ id: string; quantity: string; inventoryValue: string; lastMovementDate: string | null; product: { name: string; code: string; unit: { name: string } }; warehouse: { name: string; code: string } }> & { totalInventoryValue: string };
+export type OperationalResult = { kind: "sales"; data: SalesDailyReport } | { kind: "purchases"; data: PurchasesDailyReport } | { kind: "receivables" | "payables"; data: SettlementReport } | { kind: "inventory"; data: InventoryValueReport } | { kind: "parties"; data: PartyBalancePage } | { kind: "cash"; data: CashBalancePage };

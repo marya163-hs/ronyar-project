@@ -1,0 +1,2312 @@
+[
+  {
+    "group": "payment",
+    "text": "صد هزار تومان به سینا از صندوق اصلی پرداخت کردم",
+    "expected": {
+      "direction": "DISBURSEMENT",
+      "partyQuery": "سینا",
+      "amountRial": "1000000",
+      "accountQuery": "صندوق اصلی"
+    }
+  },
+  {
+    "group": "payment",
+    "text": "صد هزار تومان به سینا پرداخت کردم از صندوق اصلی",
+    "expected": {
+      "direction": "DISBURSEMENT",
+      "partyQuery": "سینا",
+      "amountRial": "1000000",
+      "accountQuery": "صندوق اصلی"
+    }
+  },
+  {
+    "group": "payment",
+    "text": "صد هزار تومان از صندوق اصلی به سینا پرداخت کردم",
+    "expected": {
+      "direction": "DISBURSEMENT",
+      "partyQuery": "سینا",
+      "amountRial": "1000000",
+      "accountQuery": "صندوق اصلی"
+    }
+  },
+  {
+    "group": "payment",
+    "text": "صد هزار تومان از صندوق اصلی پرداخت کردم به سینا",
+    "expected": {
+      "direction": "DISBURSEMENT",
+      "partyQuery": "سینا",
+      "amountRial": "1000000",
+      "accountQuery": "صندوق اصلی"
+    }
+  },
+  {
+    "group": "payment",
+    "text": "صد هزار تومان پرداخت کردم به سینا از صندوق اصلی",
+    "expected": {
+      "direction": "DISBURSEMENT",
+      "partyQuery": "سینا",
+      "amountRial": "1000000",
+      "accountQuery": "صندوق اصلی"
+    }
+  },
+  {
+    "group": "payment",
+    "text": "صد هزار تومان پرداخت کردم از صندوق اصلی به سینا",
+    "expected": {
+      "direction": "DISBURSEMENT",
+      "partyQuery": "سینا",
+      "amountRial": "1000000",
+      "accountQuery": "صندوق اصلی"
+    }
+  },
+  {
+    "group": "payment",
+    "text": "به سینا صد هزار تومان از صندوق اصلی پرداخت کردم",
+    "expected": {
+      "direction": "DISBURSEMENT",
+      "partyQuery": "سینا",
+      "amountRial": "1000000",
+      "accountQuery": "صندوق اصلی"
+    }
+  },
+  {
+    "group": "payment",
+    "text": "به سینا صد هزار تومان پرداخت کردم از صندوق اصلی",
+    "expected": {
+      "direction": "DISBURSEMENT",
+      "partyQuery": "سینا",
+      "amountRial": "1000000",
+      "accountQuery": "صندوق اصلی"
+    }
+  },
+  {
+    "group": "payment",
+    "text": "به سینا از صندوق اصلی صد هزار تومان پرداخت کردم",
+    "expected": {
+      "direction": "DISBURSEMENT",
+      "partyQuery": "سینا",
+      "amountRial": "1000000",
+      "accountQuery": "صندوق اصلی"
+    }
+  },
+  {
+    "group": "payment",
+    "text": "به سینا از صندوق اصلی پرداخت کردم صد هزار تومان",
+    "expected": {
+      "direction": "DISBURSEMENT",
+      "partyQuery": "سینا",
+      "amountRial": "1000000",
+      "accountQuery": "صندوق اصلی"
+    }
+  },
+  {
+    "group": "payment",
+    "text": "به سینا پرداخت کردم صد هزار تومان از صندوق اصلی",
+    "expected": {
+      "direction": "DISBURSEMENT",
+      "partyQuery": "سینا",
+      "amountRial": "1000000",
+      "accountQuery": "صندوق اصلی"
+    }
+  },
+  {
+    "group": "payment",
+    "text": "به سینا پرداخت کردم از صندوق اصلی صد هزار تومان",
+    "expected": {
+      "direction": "DISBURSEMENT",
+      "partyQuery": "سینا",
+      "amountRial": "1000000",
+      "accountQuery": "صندوق اصلی"
+    }
+  },
+  {
+    "group": "payment",
+    "text": "از صندوق اصلی صد هزار تومان به سینا پرداخت کردم",
+    "expected": {
+      "direction": "DISBURSEMENT",
+      "partyQuery": "سینا",
+      "amountRial": "1000000",
+      "accountQuery": "صندوق اصلی"
+    }
+  },
+  {
+    "group": "payment",
+    "text": "از صندوق اصلی صد هزار تومان پرداخت کردم به سینا",
+    "expected": {
+      "direction": "DISBURSEMENT",
+      "partyQuery": "سینا",
+      "amountRial": "1000000",
+      "accountQuery": "صندوق اصلی"
+    }
+  },
+  {
+    "group": "payment",
+    "text": "از صندوق اصلی به سینا صد هزار تومان پرداخت کردم",
+    "expected": {
+      "direction": "DISBURSEMENT",
+      "partyQuery": "سینا",
+      "amountRial": "1000000",
+      "accountQuery": "صندوق اصلی"
+    }
+  },
+  {
+    "group": "payment",
+    "text": "از صندوق اصلی به سینا پرداخت کردم صد هزار تومان",
+    "expected": {
+      "direction": "DISBURSEMENT",
+      "partyQuery": "سینا",
+      "amountRial": "1000000",
+      "accountQuery": "صندوق اصلی"
+    }
+  },
+  {
+    "group": "payment",
+    "text": "از صندوق اصلی پرداخت کردم صد هزار تومان به سینا",
+    "expected": {
+      "direction": "DISBURSEMENT",
+      "partyQuery": "سینا",
+      "amountRial": "1000000",
+      "accountQuery": "صندوق اصلی"
+    }
+  },
+  {
+    "group": "payment",
+    "text": "از صندوق اصلی پرداخت کردم به سینا صد هزار تومان",
+    "expected": {
+      "direction": "DISBURSEMENT",
+      "partyQuery": "سینا",
+      "amountRial": "1000000",
+      "accountQuery": "صندوق اصلی"
+    }
+  },
+  {
+    "group": "payment",
+    "text": "پرداخت کردم صد هزار تومان به سینا از صندوق اصلی",
+    "expected": {
+      "direction": "DISBURSEMENT",
+      "partyQuery": "سینا",
+      "amountRial": "1000000",
+      "accountQuery": "صندوق اصلی"
+    }
+  },
+  {
+    "group": "payment",
+    "text": "پرداخت کردم صد هزار تومان از صندوق اصلی به سینا",
+    "expected": {
+      "direction": "DISBURSEMENT",
+      "partyQuery": "سینا",
+      "amountRial": "1000000",
+      "accountQuery": "صندوق اصلی"
+    }
+  },
+  {
+    "group": "payment",
+    "text": "پرداخت کردم به سینا صد هزار تومان از صندوق اصلی",
+    "expected": {
+      "direction": "DISBURSEMENT",
+      "partyQuery": "سینا",
+      "amountRial": "1000000",
+      "accountQuery": "صندوق اصلی"
+    }
+  },
+  {
+    "group": "payment",
+    "text": "پرداخت کردم به سینا از صندوق اصلی صد هزار تومان",
+    "expected": {
+      "direction": "DISBURSEMENT",
+      "partyQuery": "سینا",
+      "amountRial": "1000000",
+      "accountQuery": "صندوق اصلی"
+    }
+  },
+  {
+    "group": "payment",
+    "text": "پرداخت کردم از صندوق اصلی صد هزار تومان به سینا",
+    "expected": {
+      "direction": "DISBURSEMENT",
+      "partyQuery": "سینا",
+      "amountRial": "1000000",
+      "accountQuery": "صندوق اصلی"
+    }
+  },
+  {
+    "group": "payment",
+    "text": "پرداخت کردم از صندوق اصلی به سینا صد هزار تومان",
+    "expected": {
+      "direction": "DISBURSEMENT",
+      "partyQuery": "سینا",
+      "amountRial": "1000000",
+      "accountQuery": "صندوق اصلی"
+    }
+  },
+  {
+    "group": "payment",
+    "text": "صد هزار تومان از سینا به حساب بانک ملت دریافت کردم",
+    "expected": {
+      "direction": "RECEIPT",
+      "partyQuery": "سینا",
+      "amountRial": "1000000",
+      "accountQuery": "بانک ملت"
+    }
+  },
+  {
+    "group": "payment",
+    "text": "صد هزار تومان از سینا دریافت کردم به حساب بانک ملت",
+    "expected": {
+      "direction": "RECEIPT",
+      "partyQuery": "سینا",
+      "amountRial": "1000000",
+      "accountQuery": "بانک ملت"
+    }
+  },
+  {
+    "group": "payment",
+    "text": "صد هزار تومان به حساب بانک ملت از سینا دریافت کردم",
+    "expected": {
+      "direction": "RECEIPT",
+      "partyQuery": "سینا",
+      "amountRial": "1000000",
+      "accountQuery": "بانک ملت"
+    }
+  },
+  {
+    "group": "payment",
+    "text": "صد هزار تومان به حساب بانک ملت دریافت کردم از سینا",
+    "expected": {
+      "direction": "RECEIPT",
+      "partyQuery": "سینا",
+      "amountRial": "1000000",
+      "accountQuery": "بانک ملت"
+    }
+  },
+  {
+    "group": "payment",
+    "text": "صد هزار تومان دریافت کردم از سینا به حساب بانک ملت",
+    "expected": {
+      "direction": "RECEIPT",
+      "partyQuery": "سینا",
+      "amountRial": "1000000",
+      "accountQuery": "بانک ملت"
+    }
+  },
+  {
+    "group": "payment",
+    "text": "صد هزار تومان دریافت کردم به حساب بانک ملت از سینا",
+    "expected": {
+      "direction": "RECEIPT",
+      "partyQuery": "سینا",
+      "amountRial": "1000000",
+      "accountQuery": "بانک ملت"
+    }
+  },
+  {
+    "group": "payment",
+    "text": "از سینا صد هزار تومان به حساب بانک ملت دریافت کردم",
+    "expected": {
+      "direction": "RECEIPT",
+      "partyQuery": "سینا",
+      "amountRial": "1000000",
+      "accountQuery": "بانک ملت"
+    }
+  },
+  {
+    "group": "payment",
+    "text": "از سینا صد هزار تومان دریافت کردم به حساب بانک ملت",
+    "expected": {
+      "direction": "RECEIPT",
+      "partyQuery": "سینا",
+      "amountRial": "1000000",
+      "accountQuery": "بانک ملت"
+    }
+  },
+  {
+    "group": "payment",
+    "text": "از سینا به حساب بانک ملت صد هزار تومان دریافت کردم",
+    "expected": {
+      "direction": "RECEIPT",
+      "partyQuery": "سینا",
+      "amountRial": "1000000",
+      "accountQuery": "بانک ملت"
+    }
+  },
+  {
+    "group": "payment",
+    "text": "از سینا به حساب بانک ملت دریافت کردم صد هزار تومان",
+    "expected": {
+      "direction": "RECEIPT",
+      "partyQuery": "سینا",
+      "amountRial": "1000000",
+      "accountQuery": "بانک ملت"
+    }
+  },
+  {
+    "group": "payment",
+    "text": "از سینا دریافت کردم صد هزار تومان به حساب بانک ملت",
+    "expected": {
+      "direction": "RECEIPT",
+      "partyQuery": "سینا",
+      "amountRial": "1000000",
+      "accountQuery": "بانک ملت"
+    }
+  },
+  {
+    "group": "payment",
+    "text": "از سینا دریافت کردم به حساب بانک ملت صد هزار تومان",
+    "expected": {
+      "direction": "RECEIPT",
+      "partyQuery": "سینا",
+      "amountRial": "1000000",
+      "accountQuery": "بانک ملت"
+    }
+  },
+  {
+    "group": "payment",
+    "text": "به حساب بانک ملت صد هزار تومان از سینا دریافت کردم",
+    "expected": {
+      "direction": "RECEIPT",
+      "partyQuery": "سینا",
+      "amountRial": "1000000",
+      "accountQuery": "بانک ملت"
+    }
+  },
+  {
+    "group": "payment",
+    "text": "به حساب بانک ملت صد هزار تومان دریافت کردم از سینا",
+    "expected": {
+      "direction": "RECEIPT",
+      "partyQuery": "سینا",
+      "amountRial": "1000000",
+      "accountQuery": "بانک ملت"
+    }
+  },
+  {
+    "group": "payment",
+    "text": "به حساب بانک ملت از سینا صد هزار تومان دریافت کردم",
+    "expected": {
+      "direction": "RECEIPT",
+      "partyQuery": "سینا",
+      "amountRial": "1000000",
+      "accountQuery": "بانک ملت"
+    }
+  },
+  {
+    "group": "payment",
+    "text": "به حساب بانک ملت از سینا دریافت کردم صد هزار تومان",
+    "expected": {
+      "direction": "RECEIPT",
+      "partyQuery": "سینا",
+      "amountRial": "1000000",
+      "accountQuery": "بانک ملت"
+    }
+  },
+  {
+    "group": "payment",
+    "text": "به حساب بانک ملت دریافت کردم صد هزار تومان از سینا",
+    "expected": {
+      "direction": "RECEIPT",
+      "partyQuery": "سینا",
+      "amountRial": "1000000",
+      "accountQuery": "بانک ملت"
+    }
+  },
+  {
+    "group": "payment",
+    "text": "به حساب بانک ملت دریافت کردم از سینا صد هزار تومان",
+    "expected": {
+      "direction": "RECEIPT",
+      "partyQuery": "سینا",
+      "amountRial": "1000000",
+      "accountQuery": "بانک ملت"
+    }
+  },
+  {
+    "group": "payment",
+    "text": "دریافت کردم صد هزار تومان از سینا به حساب بانک ملت",
+    "expected": {
+      "direction": "RECEIPT",
+      "partyQuery": "سینا",
+      "amountRial": "1000000",
+      "accountQuery": "بانک ملت"
+    }
+  },
+  {
+    "group": "payment",
+    "text": "دریافت کردم صد هزار تومان به حساب بانک ملت از سینا",
+    "expected": {
+      "direction": "RECEIPT",
+      "partyQuery": "سینا",
+      "amountRial": "1000000",
+      "accountQuery": "بانک ملت"
+    }
+  },
+  {
+    "group": "payment",
+    "text": "دریافت کردم از سینا صد هزار تومان به حساب بانک ملت",
+    "expected": {
+      "direction": "RECEIPT",
+      "partyQuery": "سینا",
+      "amountRial": "1000000",
+      "accountQuery": "بانک ملت"
+    }
+  },
+  {
+    "group": "payment",
+    "text": "دریافت کردم از سینا به حساب بانک ملت صد هزار تومان",
+    "expected": {
+      "direction": "RECEIPT",
+      "partyQuery": "سینا",
+      "amountRial": "1000000",
+      "accountQuery": "بانک ملت"
+    }
+  },
+  {
+    "group": "payment",
+    "text": "دریافت کردم به حساب بانک ملت صد هزار تومان از سینا",
+    "expected": {
+      "direction": "RECEIPT",
+      "partyQuery": "سینا",
+      "amountRial": "1000000",
+      "accountQuery": "بانک ملت"
+    }
+  },
+  {
+    "group": "payment",
+    "text": "دریافت کردم به حساب بانک ملت از سینا صد هزار تومان",
+    "expected": {
+      "direction": "RECEIPT",
+      "partyQuery": "سینا",
+      "amountRial": "1000000",
+      "accountQuery": "بانک ملت"
+    }
+  },
+  {
+    "group": "context",
+    "text": "پنجاه هزار تومن بهش از صندوق دادم",
+    "expected": {
+      "direction": "DISBURSEMENT",
+      "partyQuery": "سینا گزیری",
+      "partyId": "sina",
+      "amountRial": "500000",
+      "accountQuery": "صندوق"
+    }
+  },
+  {
+    "group": "context",
+    "text": "پنجاه هزار تومن بهش دادم از صندوق",
+    "expected": {
+      "direction": "DISBURSEMENT",
+      "partyQuery": "سینا گزیری",
+      "partyId": "sina",
+      "amountRial": "500000",
+      "accountQuery": "صندوق"
+    }
+  },
+  {
+    "group": "context",
+    "text": "پنجاه هزار تومن از صندوق بهش دادم",
+    "expected": {
+      "direction": "DISBURSEMENT",
+      "partyQuery": "سینا گزیری",
+      "partyId": "sina",
+      "amountRial": "500000",
+      "accountQuery": "صندوق"
+    }
+  },
+  {
+    "group": "context",
+    "text": "پنجاه هزار تومن از صندوق دادم بهش",
+    "expected": {
+      "direction": "DISBURSEMENT",
+      "partyQuery": "سینا گزیری",
+      "partyId": "sina",
+      "amountRial": "500000",
+      "accountQuery": "صندوق"
+    }
+  },
+  {
+    "group": "context",
+    "text": "پنجاه هزار تومن دادم بهش از صندوق",
+    "expected": {
+      "direction": "DISBURSEMENT",
+      "partyQuery": "سینا گزیری",
+      "partyId": "sina",
+      "amountRial": "500000",
+      "accountQuery": "صندوق"
+    }
+  },
+  {
+    "group": "context",
+    "text": "پنجاه هزار تومن دادم از صندوق بهش",
+    "expected": {
+      "direction": "DISBURSEMENT",
+      "partyQuery": "سینا گزیری",
+      "partyId": "sina",
+      "amountRial": "500000",
+      "accountQuery": "صندوق"
+    }
+  },
+  {
+    "group": "context",
+    "text": "بهش پنجاه هزار تومن از صندوق دادم",
+    "expected": {
+      "direction": "DISBURSEMENT",
+      "partyQuery": "سینا گزیری",
+      "partyId": "sina",
+      "amountRial": "500000",
+      "accountQuery": "صندوق"
+    }
+  },
+  {
+    "group": "context",
+    "text": "بهش پنجاه هزار تومن دادم از صندوق",
+    "expected": {
+      "direction": "DISBURSEMENT",
+      "partyQuery": "سینا گزیری",
+      "partyId": "sina",
+      "amountRial": "500000",
+      "accountQuery": "صندوق"
+    }
+  },
+  {
+    "group": "context",
+    "text": "بهش از صندوق پنجاه هزار تومن دادم",
+    "expected": {
+      "direction": "DISBURSEMENT",
+      "partyQuery": "سینا گزیری",
+      "partyId": "sina",
+      "amountRial": "500000",
+      "accountQuery": "صندوق"
+    }
+  },
+  {
+    "group": "context",
+    "text": "بهش از صندوق دادم پنجاه هزار تومن",
+    "expected": {
+      "direction": "DISBURSEMENT",
+      "partyQuery": "سینا گزیری",
+      "partyId": "sina",
+      "amountRial": "500000",
+      "accountQuery": "صندوق"
+    }
+  },
+  {
+    "group": "context",
+    "text": "بهش دادم پنجاه هزار تومن از صندوق",
+    "expected": {
+      "direction": "DISBURSEMENT",
+      "partyQuery": "سینا گزیری",
+      "partyId": "sina",
+      "amountRial": "500000",
+      "accountQuery": "صندوق"
+    }
+  },
+  {
+    "group": "context",
+    "text": "بهش دادم از صندوق پنجاه هزار تومن",
+    "expected": {
+      "direction": "DISBURSEMENT",
+      "partyQuery": "سینا گزیری",
+      "partyId": "sina",
+      "amountRial": "500000",
+      "accountQuery": "صندوق"
+    }
+  },
+  {
+    "group": "context",
+    "text": "پنجاه هزار تومن ازش به صندوق گرفتم",
+    "expected": {
+      "direction": "RECEIPT",
+      "partyQuery": "سینا گزیری",
+      "partyId": "sina",
+      "amountRial": "500000",
+      "accountQuery": "صندوق"
+    }
+  },
+  {
+    "group": "context",
+    "text": "پنجاه هزار تومن ازش گرفتم به صندوق",
+    "expected": {
+      "direction": "RECEIPT",
+      "partyQuery": "سینا گزیری",
+      "partyId": "sina",
+      "amountRial": "500000",
+      "accountQuery": "صندوق"
+    }
+  },
+  {
+    "group": "context",
+    "text": "پنجاه هزار تومن به صندوق ازش گرفتم",
+    "expected": {
+      "direction": "RECEIPT",
+      "partyQuery": "سینا گزیری",
+      "partyId": "sina",
+      "amountRial": "500000",
+      "accountQuery": "صندوق"
+    }
+  },
+  {
+    "group": "context",
+    "text": "پنجاه هزار تومن به صندوق گرفتم ازش",
+    "expected": {
+      "direction": "RECEIPT",
+      "partyQuery": "سینا گزیری",
+      "partyId": "sina",
+      "amountRial": "500000",
+      "accountQuery": "صندوق"
+    }
+  },
+  {
+    "group": "context",
+    "text": "پنجاه هزار تومن گرفتم ازش به صندوق",
+    "expected": {
+      "direction": "RECEIPT",
+      "partyQuery": "سینا گزیری",
+      "partyId": "sina",
+      "amountRial": "500000",
+      "accountQuery": "صندوق"
+    }
+  },
+  {
+    "group": "context",
+    "text": "پنجاه هزار تومن گرفتم به صندوق ازش",
+    "expected": {
+      "direction": "RECEIPT",
+      "partyQuery": "سینا گزیری",
+      "partyId": "sina",
+      "amountRial": "500000",
+      "accountQuery": "صندوق"
+    }
+  },
+  {
+    "group": "context",
+    "text": "ازش پنجاه هزار تومن به صندوق گرفتم",
+    "expected": {
+      "direction": "RECEIPT",
+      "partyQuery": "سینا گزیری",
+      "partyId": "sina",
+      "amountRial": "500000",
+      "accountQuery": "صندوق"
+    }
+  },
+  {
+    "group": "context",
+    "text": "ازش پنجاه هزار تومن گرفتم به صندوق",
+    "expected": {
+      "direction": "RECEIPT",
+      "partyQuery": "سینا گزیری",
+      "partyId": "sina",
+      "amountRial": "500000",
+      "accountQuery": "صندوق"
+    }
+  },
+  {
+    "group": "context",
+    "text": "ازش به صندوق پنجاه هزار تومن گرفتم",
+    "expected": {
+      "direction": "RECEIPT",
+      "partyQuery": "سینا گزیری",
+      "partyId": "sina",
+      "amountRial": "500000",
+      "accountQuery": "صندوق"
+    }
+  },
+  {
+    "group": "context",
+    "text": "ازش به صندوق گرفتم پنجاه هزار تومن",
+    "expected": {
+      "direction": "RECEIPT",
+      "partyQuery": "سینا گزیری",
+      "partyId": "sina",
+      "amountRial": "500000",
+      "accountQuery": "صندوق"
+    }
+  },
+  {
+    "group": "context",
+    "text": "ازش گرفتم پنجاه هزار تومن به صندوق",
+    "expected": {
+      "direction": "RECEIPT",
+      "partyQuery": "سینا گزیری",
+      "partyId": "sina",
+      "amountRial": "500000",
+      "accountQuery": "صندوق"
+    }
+  },
+  {
+    "group": "context",
+    "text": "ازش گرفتم به صندوق پنجاه هزار تومن",
+    "expected": {
+      "direction": "RECEIPT",
+      "partyQuery": "سینا گزیری",
+      "partyId": "sina",
+      "amountRial": "500000",
+      "accountQuery": "صندوق"
+    }
+  },
+  {
+    "group": "transaction",
+    "text": "دو عدد چیپس دونه ای بیست هزار تومان به سینا فروختم",
+    "expected": {
+      "purchase": false,
+      "party": "سینا",
+      "product": "چیپس",
+      "quantity": "2",
+      "unitPrice": "200000"
+    }
+  },
+  {
+    "group": "transaction",
+    "text": "به سینا دو عدد چیپس دونه ای بیست هزار تومان فروختم",
+    "expected": {
+      "purchase": false,
+      "party": "سینا",
+      "product": "چیپس",
+      "quantity": "2",
+      "unitPrice": "200000"
+    }
+  },
+  {
+    "group": "transaction",
+    "text": "دو عدد چیپس دونه ای بیست هزار تومان فروختم به سینا",
+    "expected": {
+      "purchase": false,
+      "party": "سینا",
+      "product": "چیپس",
+      "quantity": "2",
+      "unitPrice": "200000"
+    }
+  },
+  {
+    "group": "transaction",
+    "text": "فروختم دو عدد چیپس دونه ای بیست هزار تومان به سینا",
+    "expected": {
+      "purchase": false,
+      "party": "سینا",
+      "product": "چیپس",
+      "quantity": "2",
+      "unitPrice": "200000"
+    }
+  },
+  {
+    "group": "transaction",
+    "text": "به سینا فروختم دو عدد چیپس دونه ای بیست هزار تومان",
+    "expected": {
+      "purchase": false,
+      "party": "سینا",
+      "product": "چیپس",
+      "quantity": "2",
+      "unitPrice": "200000"
+    }
+  },
+  {
+    "group": "transaction",
+    "text": "سه عدد چیپس دونه ای بیست هزار تومان به سینا فروختم",
+    "expected": {
+      "purchase": false,
+      "party": "سینا",
+      "product": "چیپس",
+      "quantity": "3",
+      "unitPrice": "200000"
+    }
+  },
+  {
+    "group": "transaction",
+    "text": "به سینا سه عدد چیپس دونه ای بیست هزار تومان فروختم",
+    "expected": {
+      "purchase": false,
+      "party": "سینا",
+      "product": "چیپس",
+      "quantity": "3",
+      "unitPrice": "200000"
+    }
+  },
+  {
+    "group": "transaction",
+    "text": "سه عدد چیپس دونه ای بیست هزار تومان فروختم به سینا",
+    "expected": {
+      "purchase": false,
+      "party": "سینا",
+      "product": "چیپس",
+      "quantity": "3",
+      "unitPrice": "200000"
+    }
+  },
+  {
+    "group": "transaction",
+    "text": "فروختم سه عدد چیپس دونه ای بیست هزار تومان به سینا",
+    "expected": {
+      "purchase": false,
+      "party": "سینا",
+      "product": "چیپس",
+      "quantity": "3",
+      "unitPrice": "200000"
+    }
+  },
+  {
+    "group": "transaction",
+    "text": "به سینا فروختم سه عدد چیپس دونه ای بیست هزار تومان",
+    "expected": {
+      "purchase": false,
+      "party": "سینا",
+      "product": "چیپس",
+      "quantity": "3",
+      "unitPrice": "200000"
+    }
+  },
+  {
+    "group": "transaction",
+    "text": "پنج عدد چیپس دونه ای بیست هزار تومان به سینا فروختم",
+    "expected": {
+      "purchase": false,
+      "party": "سینا",
+      "product": "چیپس",
+      "quantity": "5",
+      "unitPrice": "200000"
+    }
+  },
+  {
+    "group": "transaction",
+    "text": "به سینا پنج عدد چیپس دونه ای بیست هزار تومان فروختم",
+    "expected": {
+      "purchase": false,
+      "party": "سینا",
+      "product": "چیپس",
+      "quantity": "5",
+      "unitPrice": "200000"
+    }
+  },
+  {
+    "group": "transaction",
+    "text": "پنج عدد چیپس دونه ای بیست هزار تومان فروختم به سینا",
+    "expected": {
+      "purchase": false,
+      "party": "سینا",
+      "product": "چیپس",
+      "quantity": "5",
+      "unitPrice": "200000"
+    }
+  },
+  {
+    "group": "transaction",
+    "text": "فروختم پنج عدد چیپس دونه ای بیست هزار تومان به سینا",
+    "expected": {
+      "purchase": false,
+      "party": "سینا",
+      "product": "چیپس",
+      "quantity": "5",
+      "unitPrice": "200000"
+    }
+  },
+  {
+    "group": "transaction",
+    "text": "به سینا فروختم پنج عدد چیپس دونه ای بیست هزار تومان",
+    "expected": {
+      "purchase": false,
+      "party": "سینا",
+      "product": "چیپس",
+      "quantity": "5",
+      "unitPrice": "200000"
+    }
+  },
+  {
+    "group": "transaction",
+    "text": "هفت عدد چیپس دونه ای بیست هزار تومان به سینا فروختم",
+    "expected": {
+      "purchase": false,
+      "party": "سینا",
+      "product": "چیپس",
+      "quantity": "7",
+      "unitPrice": "200000"
+    }
+  },
+  {
+    "group": "transaction",
+    "text": "به سینا هفت عدد چیپس دونه ای بیست هزار تومان فروختم",
+    "expected": {
+      "purchase": false,
+      "party": "سینا",
+      "product": "چیپس",
+      "quantity": "7",
+      "unitPrice": "200000"
+    }
+  },
+  {
+    "group": "transaction",
+    "text": "هفت عدد چیپس دونه ای بیست هزار تومان فروختم به سینا",
+    "expected": {
+      "purchase": false,
+      "party": "سینا",
+      "product": "چیپس",
+      "quantity": "7",
+      "unitPrice": "200000"
+    }
+  },
+  {
+    "group": "transaction",
+    "text": "فروختم هفت عدد چیپس دونه ای بیست هزار تومان به سینا",
+    "expected": {
+      "purchase": false,
+      "party": "سینا",
+      "product": "چیپس",
+      "quantity": "7",
+      "unitPrice": "200000"
+    }
+  },
+  {
+    "group": "transaction",
+    "text": "به سینا فروختم هفت عدد چیپس دونه ای بیست هزار تومان",
+    "expected": {
+      "purchase": false,
+      "party": "سینا",
+      "product": "چیپس",
+      "quantity": "7",
+      "unitPrice": "200000"
+    }
+  },
+  {
+    "group": "transaction",
+    "text": "دو عدد چیپس دونه ای بیست هزار تومان از سینا خریدم",
+    "expected": {
+      "purchase": true,
+      "party": "سینا",
+      "product": "چیپس",
+      "quantity": "2",
+      "unitPrice": "200000"
+    }
+  },
+  {
+    "group": "transaction",
+    "text": "از سینا دو عدد چیپس دونه ای بیست هزار تومان خریدم",
+    "expected": {
+      "purchase": true,
+      "party": "سینا",
+      "product": "چیپس",
+      "quantity": "2",
+      "unitPrice": "200000"
+    }
+  },
+  {
+    "group": "transaction",
+    "text": "دو عدد چیپس دونه ای بیست هزار تومان خریدم از سینا",
+    "expected": {
+      "purchase": true,
+      "party": "سینا",
+      "product": "چیپس",
+      "quantity": "2",
+      "unitPrice": "200000"
+    }
+  },
+  {
+    "group": "transaction",
+    "text": "خریدم دو عدد چیپس دونه ای بیست هزار تومان از سینا",
+    "expected": {
+      "purchase": true,
+      "party": "سینا",
+      "product": "چیپس",
+      "quantity": "2",
+      "unitPrice": "200000"
+    }
+  },
+  {
+    "group": "transaction",
+    "text": "از سینا خریدم دو عدد چیپس دونه ای بیست هزار تومان",
+    "expected": {
+      "purchase": true,
+      "party": "سینا",
+      "product": "چیپس",
+      "quantity": "2",
+      "unitPrice": "200000"
+    }
+  },
+  {
+    "group": "transaction",
+    "text": "سه عدد چیپس دونه ای بیست هزار تومان از سینا خریدم",
+    "expected": {
+      "purchase": true,
+      "party": "سینا",
+      "product": "چیپس",
+      "quantity": "3",
+      "unitPrice": "200000"
+    }
+  },
+  {
+    "group": "transaction",
+    "text": "از سینا سه عدد چیپس دونه ای بیست هزار تومان خریدم",
+    "expected": {
+      "purchase": true,
+      "party": "سینا",
+      "product": "چیپس",
+      "quantity": "3",
+      "unitPrice": "200000"
+    }
+  },
+  {
+    "group": "transaction",
+    "text": "سه عدد چیپس دونه ای بیست هزار تومان خریدم از سینا",
+    "expected": {
+      "purchase": true,
+      "party": "سینا",
+      "product": "چیپس",
+      "quantity": "3",
+      "unitPrice": "200000"
+    }
+  },
+  {
+    "group": "transaction",
+    "text": "خریدم سه عدد چیپس دونه ای بیست هزار تومان از سینا",
+    "expected": {
+      "purchase": true,
+      "party": "سینا",
+      "product": "چیپس",
+      "quantity": "3",
+      "unitPrice": "200000"
+    }
+  },
+  {
+    "group": "transaction",
+    "text": "از سینا خریدم سه عدد چیپس دونه ای بیست هزار تومان",
+    "expected": {
+      "purchase": true,
+      "party": "سینا",
+      "product": "چیپس",
+      "quantity": "3",
+      "unitPrice": "200000"
+    }
+  },
+  {
+    "group": "transaction",
+    "text": "پنج عدد چیپس دونه ای بیست هزار تومان از سینا خریدم",
+    "expected": {
+      "purchase": true,
+      "party": "سینا",
+      "product": "چیپس",
+      "quantity": "5",
+      "unitPrice": "200000"
+    }
+  },
+  {
+    "group": "transaction",
+    "text": "از سینا پنج عدد چیپس دونه ای بیست هزار تومان خریدم",
+    "expected": {
+      "purchase": true,
+      "party": "سینا",
+      "product": "چیپس",
+      "quantity": "5",
+      "unitPrice": "200000"
+    }
+  },
+  {
+    "group": "transaction",
+    "text": "پنج عدد چیپس دونه ای بیست هزار تومان خریدم از سینا",
+    "expected": {
+      "purchase": true,
+      "party": "سینا",
+      "product": "چیپس",
+      "quantity": "5",
+      "unitPrice": "200000"
+    }
+  },
+  {
+    "group": "transaction",
+    "text": "خریدم پنج عدد چیپس دونه ای بیست هزار تومان از سینا",
+    "expected": {
+      "purchase": true,
+      "party": "سینا",
+      "product": "چیپس",
+      "quantity": "5",
+      "unitPrice": "200000"
+    }
+  },
+  {
+    "group": "transaction",
+    "text": "از سینا خریدم پنج عدد چیپس دونه ای بیست هزار تومان",
+    "expected": {
+      "purchase": true,
+      "party": "سینا",
+      "product": "چیپس",
+      "quantity": "5",
+      "unitPrice": "200000"
+    }
+  },
+  {
+    "group": "transaction",
+    "text": "هفت عدد چیپس دونه ای بیست هزار تومان از سینا خریدم",
+    "expected": {
+      "purchase": true,
+      "party": "سینا",
+      "product": "چیپس",
+      "quantity": "7",
+      "unitPrice": "200000"
+    }
+  },
+  {
+    "group": "transaction",
+    "text": "از سینا هفت عدد چیپس دونه ای بیست هزار تومان خریدم",
+    "expected": {
+      "purchase": true,
+      "party": "سینا",
+      "product": "چیپس",
+      "quantity": "7",
+      "unitPrice": "200000"
+    }
+  },
+  {
+    "group": "transaction",
+    "text": "هفت عدد چیپس دونه ای بیست هزار تومان خریدم از سینا",
+    "expected": {
+      "purchase": true,
+      "party": "سینا",
+      "product": "چیپس",
+      "quantity": "7",
+      "unitPrice": "200000"
+    }
+  },
+  {
+    "group": "transaction",
+    "text": "خریدم هفت عدد چیپس دونه ای بیست هزار تومان از سینا",
+    "expected": {
+      "purchase": true,
+      "party": "سینا",
+      "product": "چیپس",
+      "quantity": "7",
+      "unitPrice": "200000"
+    }
+  },
+  {
+    "group": "transaction",
+    "text": "از سینا خریدم هفت عدد چیپس دونه ای بیست هزار تومان",
+    "expected": {
+      "purchase": true,
+      "party": "سینا",
+      "product": "چیپس",
+      "quantity": "7",
+      "unitPrice": "200000"
+    }
+  },
+  {
+    "group": "trade",
+    "text": "گزارش فروش امروز رو نشون بده",
+    "expected": {
+      "kind": "sales",
+      "range": "امروز",
+      "chart": false
+    }
+  },
+  {
+    "group": "trade",
+    "text": "امروز چقد فروختم",
+    "expected": {
+      "kind": "sales",
+      "range": "امروز",
+      "chart": false
+    }
+  },
+  {
+    "group": "trade",
+    "text": "نمودار فروش امروز رو بکش",
+    "expected": {
+      "kind": "sales",
+      "range": "امروز",
+      "chart": true
+    }
+  },
+  {
+    "group": "trade",
+    "text": "گزارش فروش دیروز رو نشون بده",
+    "expected": {
+      "kind": "sales",
+      "range": "دیروز",
+      "chart": false
+    }
+  },
+  {
+    "group": "trade",
+    "text": "دیروز چقد فروختم",
+    "expected": {
+      "kind": "sales",
+      "range": "دیروز",
+      "chart": false
+    }
+  },
+  {
+    "group": "trade",
+    "text": "نمودار فروش دیروز رو بکش",
+    "expected": {
+      "kind": "sales",
+      "range": "دیروز",
+      "chart": true
+    }
+  },
+  {
+    "group": "trade",
+    "text": "گزارش فروش این هفته رو نشون بده",
+    "expected": {
+      "kind": "sales",
+      "range": "این هفته",
+      "chart": false
+    }
+  },
+  {
+    "group": "trade",
+    "text": "این هفته چقد فروختم",
+    "expected": {
+      "kind": "sales",
+      "range": "این هفته",
+      "chart": false
+    }
+  },
+  {
+    "group": "trade",
+    "text": "نمودار فروش این هفته رو بکش",
+    "expected": {
+      "kind": "sales",
+      "range": "این هفته",
+      "chart": true
+    }
+  },
+  {
+    "group": "trade",
+    "text": "گزارش فروش هفته پیش رو نشون بده",
+    "expected": {
+      "kind": "sales",
+      "range": "هفته قبل",
+      "chart": false
+    }
+  },
+  {
+    "group": "trade",
+    "text": "هفته پیش چقد فروختم",
+    "expected": {
+      "kind": "sales",
+      "range": "هفته قبل",
+      "chart": false
+    }
+  },
+  {
+    "group": "trade",
+    "text": "نمودار فروش هفته پیش رو بکش",
+    "expected": {
+      "kind": "sales",
+      "range": "هفته قبل",
+      "chart": true
+    }
+  },
+  {
+    "group": "trade",
+    "text": "گزارش فروش این ماه رو نشون بده",
+    "expected": {
+      "kind": "sales",
+      "range": "این ماه",
+      "chart": false
+    }
+  },
+  {
+    "group": "trade",
+    "text": "این ماه چقد فروختم",
+    "expected": {
+      "kind": "sales",
+      "range": "این ماه",
+      "chart": false
+    }
+  },
+  {
+    "group": "trade",
+    "text": "نمودار فروش این ماه رو بکش",
+    "expected": {
+      "kind": "sales",
+      "range": "این ماه",
+      "chart": true
+    }
+  },
+  {
+    "group": "trade",
+    "text": "گزارش فروش ماه پیش رو نشون بده",
+    "expected": {
+      "kind": "sales",
+      "range": "ماه قبل",
+      "chart": false
+    }
+  },
+  {
+    "group": "trade",
+    "text": "ماه پیش چقد فروختم",
+    "expected": {
+      "kind": "sales",
+      "range": "ماه قبل",
+      "chart": false
+    }
+  },
+  {
+    "group": "trade",
+    "text": "نمودار فروش ماه پیش رو بکش",
+    "expected": {
+      "kind": "sales",
+      "range": "ماه قبل",
+      "chart": true
+    }
+  },
+  {
+    "group": "trade",
+    "text": "گزارش خرید امروز رو نشون بده",
+    "expected": {
+      "kind": "purchases",
+      "range": "امروز",
+      "chart": false
+    }
+  },
+  {
+    "group": "trade",
+    "text": "امروز چقد خریدم",
+    "expected": {
+      "kind": "purchases",
+      "range": "امروز",
+      "chart": false
+    }
+  },
+  {
+    "group": "trade",
+    "text": "نمودار خرید امروز رو بکش",
+    "expected": {
+      "kind": "purchases",
+      "range": "امروز",
+      "chart": true
+    }
+  },
+  {
+    "group": "trade",
+    "text": "گزارش خرید دیروز رو نشون بده",
+    "expected": {
+      "kind": "purchases",
+      "range": "دیروز",
+      "chart": false
+    }
+  },
+  {
+    "group": "trade",
+    "text": "دیروز چقد خریدم",
+    "expected": {
+      "kind": "purchases",
+      "range": "دیروز",
+      "chart": false
+    }
+  },
+  {
+    "group": "trade",
+    "text": "نمودار خرید دیروز رو بکش",
+    "expected": {
+      "kind": "purchases",
+      "range": "دیروز",
+      "chart": true
+    }
+  },
+  {
+    "group": "trade",
+    "text": "گزارش خرید این هفته رو نشون بده",
+    "expected": {
+      "kind": "purchases",
+      "range": "این هفته",
+      "chart": false
+    }
+  },
+  {
+    "group": "trade",
+    "text": "این هفته چقد خریدم",
+    "expected": {
+      "kind": "purchases",
+      "range": "این هفته",
+      "chart": false
+    }
+  },
+  {
+    "group": "trade",
+    "text": "نمودار خرید این هفته رو بکش",
+    "expected": {
+      "kind": "purchases",
+      "range": "این هفته",
+      "chart": true
+    }
+  },
+  {
+    "group": "trade",
+    "text": "گزارش خرید هفته پیش رو نشون بده",
+    "expected": {
+      "kind": "purchases",
+      "range": "هفته قبل",
+      "chart": false
+    }
+  },
+  {
+    "group": "trade",
+    "text": "هفته پیش چقد خریدم",
+    "expected": {
+      "kind": "purchases",
+      "range": "هفته قبل",
+      "chart": false
+    }
+  },
+  {
+    "group": "trade",
+    "text": "نمودار خرید هفته پیش رو بکش",
+    "expected": {
+      "kind": "purchases",
+      "range": "هفته قبل",
+      "chart": true
+    }
+  },
+  {
+    "group": "trade",
+    "text": "گزارش خرید این ماه رو نشون بده",
+    "expected": {
+      "kind": "purchases",
+      "range": "این ماه",
+      "chart": false
+    }
+  },
+  {
+    "group": "trade",
+    "text": "این ماه چقد خریدم",
+    "expected": {
+      "kind": "purchases",
+      "range": "این ماه",
+      "chart": false
+    }
+  },
+  {
+    "group": "trade",
+    "text": "نمودار خرید این ماه رو بکش",
+    "expected": {
+      "kind": "purchases",
+      "range": "این ماه",
+      "chart": true
+    }
+  },
+  {
+    "group": "trade",
+    "text": "گزارش خرید ماه پیش رو نشون بده",
+    "expected": {
+      "kind": "purchases",
+      "range": "ماه قبل",
+      "chart": false
+    }
+  },
+  {
+    "group": "trade",
+    "text": "ماه پیش چقد خریدم",
+    "expected": {
+      "kind": "purchases",
+      "range": "ماه قبل",
+      "chart": false
+    }
+  },
+  {
+    "group": "trade",
+    "text": "نمودار خرید ماه پیش رو بکش",
+    "expected": {
+      "kind": "purchases",
+      "range": "ماه قبل",
+      "chart": true
+    }
+  },
+  {
+    "group": "cash",
+    "text": "امروز چقدر دریافت داشتیم",
+    "expected": {
+      "direction": "RECEIPT",
+      "range": "امروز"
+    }
+  },
+  {
+    "group": "cash",
+    "text": "نمودار دریافت امروز رو نشون بده",
+    "expected": {
+      "direction": "RECEIPT",
+      "range": "امروز"
+    }
+  },
+  {
+    "group": "cash",
+    "text": "دیروز چقدر دریافت داشتیم",
+    "expected": {
+      "direction": "RECEIPT",
+      "range": "دیروز"
+    }
+  },
+  {
+    "group": "cash",
+    "text": "نمودار دریافت دیروز رو نشون بده",
+    "expected": {
+      "direction": "RECEIPT",
+      "range": "دیروز"
+    }
+  },
+  {
+    "group": "cash",
+    "text": "این هفته چقدر دریافت داشتیم",
+    "expected": {
+      "direction": "RECEIPT",
+      "range": "این هفته"
+    }
+  },
+  {
+    "group": "cash",
+    "text": "نمودار دریافت این هفته رو نشون بده",
+    "expected": {
+      "direction": "RECEIPT",
+      "range": "این هفته"
+    }
+  },
+  {
+    "group": "cash",
+    "text": "ماه پیش چقدر دریافت داشتیم",
+    "expected": {
+      "direction": "RECEIPT",
+      "range": "ماه قبل"
+    }
+  },
+  {
+    "group": "cash",
+    "text": "نمودار دریافت ماه پیش رو نشون بده",
+    "expected": {
+      "direction": "RECEIPT",
+      "range": "ماه قبل"
+    }
+  },
+  {
+    "group": "cash",
+    "text": "امروز چقدر پرداخت داشتیم",
+    "expected": {
+      "direction": "DISBURSEMENT",
+      "range": "امروز"
+    }
+  },
+  {
+    "group": "cash",
+    "text": "نمودار پرداخت امروز رو نشون بده",
+    "expected": {
+      "direction": "DISBURSEMENT",
+      "range": "امروز"
+    }
+  },
+  {
+    "group": "cash",
+    "text": "دیروز چقدر پرداخت داشتیم",
+    "expected": {
+      "direction": "DISBURSEMENT",
+      "range": "دیروز"
+    }
+  },
+  {
+    "group": "cash",
+    "text": "نمودار پرداخت دیروز رو نشون بده",
+    "expected": {
+      "direction": "DISBURSEMENT",
+      "range": "دیروز"
+    }
+  },
+  {
+    "group": "cash",
+    "text": "این هفته چقدر پرداخت داشتیم",
+    "expected": {
+      "direction": "DISBURSEMENT",
+      "range": "این هفته"
+    }
+  },
+  {
+    "group": "cash",
+    "text": "نمودار پرداخت این هفته رو نشون بده",
+    "expected": {
+      "direction": "DISBURSEMENT",
+      "range": "این هفته"
+    }
+  },
+  {
+    "group": "cash",
+    "text": "ماه پیش چقدر پرداخت داشتیم",
+    "expected": {
+      "direction": "DISBURSEMENT",
+      "range": "ماه قبل"
+    }
+  },
+  {
+    "group": "cash",
+    "text": "نمودار پرداخت ماه پیش رو نشون بده",
+    "expected": {
+      "direction": "DISBURSEMENT",
+      "range": "ماه قبل"
+    }
+  },
+  {
+    "group": "cash",
+    "text": "امروز چقدر دریافت و پرداخت داشتیم",
+    "expected": {
+      "direction": "ALL",
+      "range": "امروز"
+    }
+  },
+  {
+    "group": "cash",
+    "text": "نمودار دریافت و پرداخت امروز رو نشون بده",
+    "expected": {
+      "direction": "ALL",
+      "range": "امروز"
+    }
+  },
+  {
+    "group": "cash",
+    "text": "دیروز چقدر دریافت و پرداخت داشتیم",
+    "expected": {
+      "direction": "ALL",
+      "range": "دیروز"
+    }
+  },
+  {
+    "group": "cash",
+    "text": "نمودار دریافت و پرداخت دیروز رو نشون بده",
+    "expected": {
+      "direction": "ALL",
+      "range": "دیروز"
+    }
+  },
+  {
+    "group": "cash",
+    "text": "این هفته چقدر دریافت و پرداخت داشتیم",
+    "expected": {
+      "direction": "ALL",
+      "range": "این هفته"
+    }
+  },
+  {
+    "group": "cash",
+    "text": "نمودار دریافت و پرداخت این هفته رو نشون بده",
+    "expected": {
+      "direction": "ALL",
+      "range": "این هفته"
+    }
+  },
+  {
+    "group": "cash",
+    "text": "ماه پیش چقدر دریافت و پرداخت داشتیم",
+    "expected": {
+      "direction": "ALL",
+      "range": "ماه قبل"
+    }
+  },
+  {
+    "group": "cash",
+    "text": "نمودار دریافت و پرداخت ماه پیش رو نشون بده",
+    "expected": {
+      "direction": "ALL",
+      "range": "ماه قبل"
+    }
+  },
+  {
+    "group": "party",
+    "text": "چقدر به سینا بدهکارم",
+    "expected": {
+      "intent": "PAYABLES",
+      "partyQuery": "سینا"
+    }
+  },
+  {
+    "group": "party",
+    "text": "چقدر بدهکارم به سینا",
+    "expected": {
+      "intent": "PAYABLES",
+      "partyQuery": "سینا"
+    }
+  },
+  {
+    "group": "party",
+    "text": "چقد بدهکارم به سینا",
+    "expected": {
+      "intent": "PAYABLES",
+      "partyQuery": "سینا"
+    }
+  },
+  {
+    "group": "party",
+    "text": "چه قدر به سینا بدهکارم",
+    "expected": {
+      "intent": "PAYABLES",
+      "partyQuery": "سینا"
+    }
+  },
+  {
+    "group": "party",
+    "text": "بدهی من به سینا چقدره",
+    "expected": {
+      "intent": "PAYABLES",
+      "partyQuery": "سینا"
+    }
+  },
+  {
+    "group": "party",
+    "text": "سینا چقدر ازم طلب داره",
+    "expected": {
+      "intent": "PAYABLES",
+      "partyQuery": "سینا"
+    }
+  },
+  {
+    "group": "party",
+    "text": "سینا ازم چقدر طلب داره",
+    "expected": {
+      "intent": "PAYABLES",
+      "partyQuery": "سینا"
+    }
+  },
+  {
+    "group": "party",
+    "text": "به سینا چقدر بدهی دارم",
+    "expected": {
+      "intent": "PAYABLES",
+      "partyQuery": "سینا"
+    }
+  },
+  {
+    "group": "party",
+    "text": "به سینا بدهیم چقدره",
+    "expected": {
+      "intent": "PAYABLES",
+      "partyQuery": "سینا"
+    }
+  },
+  {
+    "group": "party",
+    "text": "لطفا چقدر به سینا بدهکارم؟",
+    "expected": {
+      "intent": "PAYABLES",
+      "partyQuery": "سینا"
+    }
+  },
+  {
+    "group": "party",
+    "text": "چقدر از سینا طلب دارم",
+    "expected": {
+      "intent": "RECEIVABLES",
+      "partyQuery": "سینا"
+    }
+  },
+  {
+    "group": "party",
+    "text": "چقدر طلب دارم از سینا",
+    "expected": {
+      "intent": "RECEIVABLES",
+      "partyQuery": "سینا"
+    }
+  },
+  {
+    "group": "party",
+    "text": "چقد طلبکارم از سینا",
+    "expected": {
+      "intent": "RECEIVABLES",
+      "partyQuery": "سینا"
+    }
+  },
+  {
+    "group": "party",
+    "text": "طلبم از سینا چقدره",
+    "expected": {
+      "intent": "RECEIVABLES",
+      "partyQuery": "سینا"
+    }
+  },
+  {
+    "group": "party",
+    "text": "طلب من از سینا چقدر است",
+    "expected": {
+      "intent": "RECEIVABLES",
+      "partyQuery": "سینا"
+    }
+  },
+  {
+    "group": "party",
+    "text": "سینا چقدر بهم بدهکاره",
+    "expected": {
+      "intent": "RECEIVABLES",
+      "partyQuery": "سینا"
+    }
+  },
+  {
+    "group": "party",
+    "text": "سینا بهم چقدر بدهکاره",
+    "expected": {
+      "intent": "RECEIVABLES",
+      "partyQuery": "سینا"
+    }
+  },
+  {
+    "group": "party",
+    "text": "از سینا چقدر طلبکارم",
+    "expected": {
+      "intent": "RECEIVABLES",
+      "partyQuery": "سینا"
+    }
+  },
+  {
+    "group": "party",
+    "text": "میشه از سینا چقد طلب دارم؟",
+    "expected": {
+      "intent": "RECEIVABLES",
+      "partyQuery": "سینا"
+    }
+  },
+  {
+    "group": "party",
+    "text": "چقدر سینا به من بدهکاره",
+    "expected": {
+      "intent": "RECEIVABLES",
+      "partyQuery": "سینا"
+    }
+  },
+  {
+    "group": "party",
+    "text": "حساب سینا چقدره",
+    "expected": {
+      "intent": "BOTH",
+      "partyQuery": "سینا"
+    }
+  },
+  {
+    "group": "party",
+    "text": "مانده حساب سینا چقدر است",
+    "expected": {
+      "intent": "BOTH",
+      "partyQuery": "سینا"
+    }
+  },
+  {
+    "group": "party",
+    "text": "حساب سینا رو بیار",
+    "expected": {
+      "intent": "BOTH",
+      "partyQuery": "سینا"
+    }
+  },
+  {
+    "group": "party",
+    "text": "حساب سینا رو بفرست",
+    "expected": {
+      "intent": "BOTH",
+      "partyQuery": "سینا"
+    }
+  },
+  {
+    "group": "party",
+    "text": "حساب سینا رو بگو",
+    "expected": {
+      "intent": "BOTH",
+      "partyQuery": "سینا"
+    }
+  },
+  {
+    "group": "party",
+    "text": "حساب سینا رو نمایش بده",
+    "expected": {
+      "intent": "BOTH",
+      "partyQuery": "سینا"
+    }
+  },
+  {
+    "group": "party",
+    "text": "سینا مانده حسابش چقدره",
+    "expected": {
+      "intent": "BOTH",
+      "partyQuery": "سینا"
+    }
+  },
+  {
+    "group": "party",
+    "text": "چقدره مانده حساب سینا",
+    "expected": {
+      "intent": "BOTH",
+      "partyQuery": "سینا"
+    }
+  },
+  {
+    "group": "party",
+    "text": "حساب سینا را نشان بده",
+    "expected": {
+      "intent": "BOTH",
+      "partyQuery": "سینا"
+    }
+  },
+  {
+    "group": "party",
+    "text": "مانده سینا چقدره",
+    "expected": {
+      "intent": "BOTH",
+      "partyQuery": "سینا"
+    }
+  },
+  {
+    "group": "inventory",
+    "text": "موجودی شیر",
+    "expected": {
+      "product": "شیر"
+    }
+  },
+  {
+    "group": "inventory",
+    "text": "شیر چند تا داریم",
+    "expected": {
+      "product": "شیر"
+    }
+  },
+  {
+    "group": "inventory",
+    "text": "چقدر شیر داریم",
+    "expected": {
+      "product": "شیر"
+    }
+  },
+  {
+    "group": "inventory",
+    "text": "شیر چقدر مونده",
+    "expected": {
+      "product": "شیر"
+    }
+  },
+  {
+    "group": "inventory",
+    "text": "موجودی چیپس",
+    "expected": {
+      "product": "چیپس"
+    }
+  },
+  {
+    "group": "inventory",
+    "text": "چیپس چند تا داریم",
+    "expected": {
+      "product": "چیپس"
+    }
+  },
+  {
+    "group": "inventory",
+    "text": "چقدر چیپس داریم",
+    "expected": {
+      "product": "چیپس"
+    }
+  },
+  {
+    "group": "inventory",
+    "text": "چیپس چقدر مونده",
+    "expected": {
+      "product": "چیپس"
+    }
+  },
+  {
+    "group": "inventory",
+    "text": "موجودی پفک",
+    "expected": {
+      "product": "پفک"
+    }
+  },
+  {
+    "group": "inventory",
+    "text": "پفک چند تا داریم",
+    "expected": {
+      "product": "پفک"
+    }
+  },
+  {
+    "group": "inventory",
+    "text": "چقدر پفک داریم",
+    "expected": {
+      "product": "پفک"
+    }
+  },
+  {
+    "group": "inventory",
+    "text": "پفک چقدر مونده",
+    "expected": {
+      "product": "پفک"
+    }
+  },
+  {
+    "group": "inventory",
+    "text": "موجودی آب معدنی",
+    "expected": {
+      "product": "آب معدنی"
+    }
+  },
+  {
+    "group": "inventory",
+    "text": "آب معدنی چند تا داریم",
+    "expected": {
+      "product": "آب معدنی"
+    }
+  },
+  {
+    "group": "inventory",
+    "text": "چقدر آب معدنی داریم",
+    "expected": {
+      "product": "آب معدنی"
+    }
+  },
+  {
+    "group": "inventory",
+    "text": "آب معدنی چقدر مونده",
+    "expected": {
+      "product": "آب معدنی"
+    }
+  },
+  {
+    "group": "followup",
+    "text": "ریز حسابش",
+    "expected": {
+      "partyId": "sina"
+    }
+  },
+  {
+    "group": "followup",
+    "text": "ریز حسابشو نشون بده",
+    "expected": {
+      "partyId": "sina"
+    }
+  },
+  {
+    "group": "followup",
+    "text": "ریز حسابش رو نشون بده",
+    "expected": {
+      "partyId": "sina"
+    }
+  },
+  {
+    "group": "followup",
+    "text": "ریز حسابش رو بیار",
+    "expected": {
+      "partyId": "sina"
+    }
+  },
+  {
+    "group": "followup",
+    "text": "ریز حسابش رو بفرست",
+    "expected": {
+      "partyId": "sina"
+    }
+  },
+  {
+    "group": "followup",
+    "text": "ریز حسابش رو باز کن",
+    "expected": {
+      "partyId": "sina"
+    }
+  },
+  {
+    "group": "followup",
+    "text": "صورت حسابش",
+    "expected": {
+      "partyId": "sina"
+    }
+  },
+  {
+    "group": "followup",
+    "text": "صورت حسابشو نشون بده",
+    "expected": {
+      "partyId": "sina"
+    }
+  },
+  {
+    "group": "followup",
+    "text": "صورت حسابش رو باز کن",
+    "expected": {
+      "partyId": "sina"
+    }
+  },
+  {
+    "group": "followup",
+    "text": "گردش حسابشو نشون بده",
+    "expected": {
+      "partyId": "sina"
+    }
+  },
+  {
+    "group": "followup",
+    "text": "لطفا ریز حسابش رو نشون بده",
+    "expected": {
+      "partyId": "sina"
+    }
+  },
+  {
+    "group": "followup",
+    "text": "میشه ریز حسابش رو نشون بده؟",
+    "expected": {
+      "partyId": "sina"
+    }
+  },
+  {
+    "group": "direction",
+    "text": "کیا بهم بدهکارن",
+    "expected": {
+      "intent": "RECEIVABLES"
+    }
+  },
+  {
+    "group": "direction",
+    "text": "چه کسایی بهم بدهکارن",
+    "expected": {
+      "intent": "RECEIVABLES"
+    }
+  },
+  {
+    "group": "direction",
+    "text": "چه کسانی به من بدهکارند",
+    "expected": {
+      "intent": "RECEIVABLES"
+    }
+  },
+  {
+    "group": "direction",
+    "text": "از کی طلب دارم",
+    "expected": {
+      "intent": "RECEIVABLES"
+    }
+  },
+  {
+    "group": "direction",
+    "text": "لیست بدهکارامو بده",
+    "expected": {
+      "intent": "RECEIVABLES"
+    }
+  },
+  {
+    "group": "direction",
+    "text": "طلبام چقدره",
+    "expected": {
+      "intent": "RECEIVABLES"
+    }
+  },
+  {
+    "group": "direction",
+    "text": "به کی بدهکارم",
+    "expected": {
+      "intent": "PAYABLES"
+    }
+  },
+  {
+    "group": "direction",
+    "text": "به کیا بدهکارم",
+    "expected": {
+      "intent": "PAYABLES"
+    }
+  },
+  {
+    "group": "direction",
+    "text": "چه کسایی از من طلب دارن",
+    "expected": {
+      "intent": "PAYABLES"
+    }
+  },
+  {
+    "group": "direction",
+    "text": "طلبکارام کیا هستن",
+    "expected": {
+      "intent": "PAYABLES"
+    }
+  },
+  {
+    "group": "direction",
+    "text": "بدهیامو نشون بده",
+    "expected": {
+      "intent": "PAYABLES"
+    }
+  },
+  {
+    "group": "direction",
+    "text": "لطفا به کی بدهکارم؟",
+    "expected": {
+      "intent": "PAYABLES"
+    }
+  },
+  {
+    "group": "reject-payment",
+    "text": "به سینا صد هزار تومان پرداخت نکردم",
+    "expected": {}
+  },
+  {
+    "group": "reject-payment",
+    "text": "به سینا ۱۰۰ تومان دادم و به علی ۲۰۰ تومان دادم",
+    "expected": {}
+  },
+  {
+    "group": "reject-payment",
+    "text": "از صندوق ۱۰۰ تومان به سینا دادم دیروز",
+    "expected": {}
+  },
+  {
+    "group": "reject-payment",
+    "text": "۱۰۰ تومان به سینا دادم حذف کن",
+    "expected": {}
+  },
+  {
+    "group": "reject-payment",
+    "text": "به سینا ۱۰۰ دلار دادم",
+    "expected": {}
+  },
+  {
+    "group": "reject-payment",
+    "text": "به سینا ۱۰۰ تومان ندادم",
+    "expected": {}
+  },
+  {
+    "group": "reject-payment",
+    "text": "به سینا ۱۰۰ تومان دادم بدون ثبت",
+    "expected": {}
+  },
+  {
+    "group": "reject-payment",
+    "text": "به سینا ۱۰۰ تومان دادم و گزارش بده",
+    "expected": {}
+  },
+  {
+    "group": "reject-payment",
+    "text": "۱۰۰ تومان از سینا دریافت کردم و پرداخت کردم",
+    "expected": {}
+  },
+  {
+    "group": "reject-payment",
+    "text": "۱۰۰ تومان به سینا و علی دادم",
+    "expected": {}
+  },
+  {
+    "group": "reject-payment",
+    "text": "۱۰۰ تومان به سینا دادم فردا",
+    "expected": {}
+  },
+  {
+    "group": "reject-payment",
+    "text": "۱۰۰ تومان بابت تخفیف به سینا دادم",
+    "expected": {}
+  },
+  {
+    "group": "reject-party",
+    "text": "چقدر به سینا دیروز بدهکارم",
+    "expected": {}
+  },
+  {
+    "group": "reject-party",
+    "text": "چقدر به سینا و علی بدهکارم",
+    "expected": {}
+  },
+  {
+    "group": "reject-party",
+    "text": "چقدر به سینا بدهکار نیستم",
+    "expected": {}
+  },
+  {
+    "group": "reject-party",
+    "text": "از سینا بالای یک میلیون چقدر طلب دارم",
+    "expected": {}
+  },
+  {
+    "group": "reject-party",
+    "text": "مانده حساب سینا این ماه چقدره",
+    "expected": {}
+  },
+  {
+    "group": "reject-party",
+    "text": "چقدر به سینا بدهکارم و پرداخت کن",
+    "expected": {}
+  }
+]

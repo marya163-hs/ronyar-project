@@ -1,0 +1,4 @@
+.invoice-search-field{display:grid;gap:8px;min-width:0;width:100%}
+.invoice-search-field>label{min-width:0}
+.invoice-search-field input[type="search"]{width:100%;min-width:0;box-sizing:border-box;background:#f8fbfc}
+.invoice-search-field>small{display:block;color:#587081;line-height:1.8;overflow-wrap:anywhere}

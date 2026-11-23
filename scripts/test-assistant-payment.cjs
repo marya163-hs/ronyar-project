@@ -1,0 +1,64 @@
+const assert=require('node:assert/strict');
+const fs=require('node:fs');const path=require('node:path');const Module=require('node:module');
+const ts=require('typescript');const root=path.resolve(__dirname,'..');
+const original=Module._resolveFilename;
+Module._resolveFilename=function(request,parent,...rest){
+ if(request.startsWith('.')&&parent?.filename.startsWith(root)){
+  const base=path.resolve(path.dirname(parent.filename),request);
+  for(const ext of ['.ts','.tsx'])if(fs.existsSync(base+ext))return base+ext;
+ }
+ return original.call(this,request,parent,...rest);
+};
+for(const ext of ['.ts','.tsx'])require.extensions[ext]=(m,f)=>m._compile(ts.transpileModule(fs.readFileSync(f,'utf8'),{fileName:f,compilerOptions:{target:ts.ScriptTarget.ES2022,module:ts.ModuleKind.CommonJS,jsx:ts.JsxEmit.ReactJSX}}).outputText,f);
+require.extensions['.css']=()=>{};
+const {paymentMessage,paymentAmountRial,paymentInvoiceCandidates,paymentAccountMatch}=require('../src/assistantPaymentPlan.ts');
+let count=0;function check(name,fn){fn();count++;console.log('PASS '+name);}
+const receipt=paymentMessage('از سینا ۵۰۰ هزار تومان دریافت کردم').proposal;
+check('receipt extracts person amount currency',()=>{assert.equal(receipt.direction,'RECEIPT');assert.equal(receipt.partyQuery,'سینا');assert.equal(receipt.amountText,'500 هزار');assert.equal(receipt.currency,'TOMAN');});
+check('toman conversion exact',()=>assert.equal(paymentAmountRial(receipt.amountText,receipt.currency),'5000000'));
+check('money-first receipt',()=>assert.equal(paymentMessage('۵۰۰ هزار تومان از سینا گرفتم').proposal.partyQuery,'سینا'));
+check('payment recipient',()=>{const p=paymentMessage('به سینا ۱.۵ میلیون ریال پرداخت کردم').proposal;assert.equal(p.direction,'DISBURSEMENT');assert.equal(paymentAmountRial(p.amountText,p.currency),'1500000');});
+check('money-first payment',()=>assert.equal(paymentMessage('۲۰۰۰ ریال به سینا دادم').proposal.direction,'DISBURSEMENT'));
+check('explicit invoice and account',()=>{const p=paymentMessage('از سینا ۵۰۰ هزار تومان دریافت کردم بابت فاکتور شماره ۲ به حساب بانک ملت').proposal;assert.equal(p.invoiceNumber,'2');assert.equal(p.accountQuery,'بانک ملت');assert.equal(p.partyQuery,'سینا');});
+check('outgoing account',()=>assert.equal(paymentMessage('به سینا ۵۰۰ هزار تومان پرداخت کردم از حساب صندوق اصلی').proposal.accountQuery,'صندوق اصلی'));
+check('default currency remains unresolved in parser',()=>assert.equal(paymentMessage('از سینا ۵۰۰ دریافت کردم').proposal.currency,null));
+check('blank amount requires form entry',()=>assert.equal(paymentMessage('ثبت دریافت').proposal.amountText,''));
+check('blank payment form',()=>assert.equal(paymentMessage('ثبت پرداخت').proposal.partyQuery,''));
+check('today supported',()=>assert.equal(paymentMessage('امروز از سینا ۵۰۰ تومان گرفتم').proposal.partyQuery,'سینا'));
+check('Arabic digits and letter normalization',()=>assert.equal(paymentMessage('از علي ٥٠٠ ريال دریافت کردم').proposal.partyQuery,'علی'));
+check('grouped amount',()=>assert.equal(paymentAmountRial(paymentMessage('از سینا ۵۰۰٬۰۰۰ ریال گرفتم').proposal.amountText,'IRR'),'500000'));
+check('fraction toman to integer rial',()=>assert.equal(paymentAmountRial('0.1','TOMAN'),'1'));
+for(const value of ['0','-1','0.01','1000000000000000000','1,23','NaN','1.000000000'])check('reject invalid amount '+value,()=>assert.throws(()=>paymentAmountRial(value,'IRR')));
+for(const value of ['از سینا ۵۰۰ تومان گرفتم دیروز','از سینا ۵۰۰ تومان دریافت کردم و به علی پرداخت کردم','از سینا ۵۰۰ تومان گرفتم تخفیف بده','از سینا ۱۲,۳۴ ریال گرفتم','از سینا ۵۰۰ دلار گرفتم','از سینا و علی ۵۰۰ تومان گرفتم'])check('reject unsupported extras '+value,()=>assert.ok(paymentMessage(value).issue));
+for(const value of ['نمودار فروش این ماه','موجودی پفک','گزارش دریافت امروز','۳ تا پفک از سینا خریدم','۲ تا پفک به سینا فروختم'])check('preserve other routes '+value,()=>assert.equal(paymentMessage(value),null));
+const rows=[{id:'a',number:'2',party:{id:'p1',name:'سینا'}},{id:'b',number:'3',party:{id:'p2',name:'سینا احمدی'}},{id:'c',number:'4',party:{id:'p3',name:'حسینا'}}];
+check('exact party priority',()=>assert.deepEqual(paymentInvoiceCandidates(rows,receipt).map(x=>x.id),['a']));
+check('whole word matching no substring',()=>assert.deepEqual(paymentInvoiceCandidates(rows.slice(1),receipt).map(x=>x.id),['b']));
+check('invoice number filter',()=>assert.equal(paymentInvoiceCandidates(rows,{...receipt,invoiceNumber:'9'}).length,0));
+check('duplicate party names stay choices',()=>assert.equal(paymentInvoiceCandidates([rows[0],{...rows[0],id:'d',party:{id:'p4',name:'سینا'}}],receipt).length,2));
+check('unknown account never guessed',()=>assert.equal(paymentAccountMatch([{id:'a',name:'بانک ملت'}],'ملی'),''));
+check('unique exact account',()=>assert.equal(paymentAccountMatch([{id:'a',name:'بانک ملت'}],'بانک ملت'),'a'));
+check('duplicate account never guessed',()=>assert.equal(paymentAccountMatch([{id:'a',name:'بانک ملت'},{id:'b',name:'بانک ملت'}],'بانک ملت'),''));
+const api=require('../src/api.ts');let pages=[],requests=[];
+api.listSales=async(...args)=>{requests.push(args);return pages.shift();};api.listPurchases=async(...args)=>{requests.push(args);return pages.shift();};
+const {loadPaymentInvoices,paymentPermission}=require('../src/AssistantPayment.tsx');
+const perms=new Set(['payments.read','payments.manage','accounts.read','periods.read','sales.read']);
+check('receipt permissions',()=>assert.equal(paymentPermission('RECEIPT',p=>perms.has(p)),true));
+check('payment requires purchase access',()=>assert.equal(paymentPermission('DISBURSEMENT',p=>perms.has(p)),false));
+for(const p of perms)check('missing grant denied '+p,()=>assert.equal(paymentPermission('RECEIPT',x=>x!==p&&perms.has(x)),false));
+const invoice=(id)=>({id,status:'POSTED',number:'2',documentDate:'2026-10-23',total:'500',currency:'IRR',version:1,party:{id:'party',name:'سینا'}});
+const page=(n,items,total=items.length,totalPages=1)=>({page:n,items,total,totalPages});
+(async()=>{const signal=new AbortController().signal;
+ pages=[page(1,[invoice('a')],2,2),page(2,[invoice('b')],2,2)];const all=await loadPaymentInvoices('tenant-a','RECEIPT',signal);
+ check('complete pagination and tenant scope',()=>{assert.equal(all.length,2);assert.equal(requests[0][0],'tenant-a');assert.equal(requests[0][1],'POSTED');assert.equal(requests[1][2],2);assert.equal(requests[0][3],signal);});
+ for(const [name,data] of [['duplicate',[page(1,[invoice('a')],2,2),page(2,[invoice('a')],2,2)]],['incomplete',[page(1,[],1,1)]],['too many pages',[page(1,[],1001,51)]],['changed total',[page(1,[invoice('a')],2,2),page(2,[invoice('b')],3,2)]],['nonposted',[page(1,[{...invoice('a'),status:'DRAFT'}])]]]){pages=data;await assert.rejects(loadPaymentInvoices('tenant-a','RECEIPT',signal));count++;console.log('PASS reject '+name);}
+ pages=[page(1,[])];check('empty list setup',()=>assert.equal(pages.length,1));assert.deepEqual(await loadPaymentInvoices('tenant-b','DISBURSEMENT',signal),[]);
+ const c=new AbortController();c.abort();await assert.rejects(loadPaymentInvoices('tenant-a','RECEIPT',c.signal));count++;check('unique whole-word cash account',()=>assert.equal(paymentAccountMatch([{id:'a',name:'صندوق اصلی'}],'صندوق'),'a'));
+check('ambiguous cash accounts require choice',()=>assert.equal(paymentAccountMatch([{id:'a',name:'صندوق اصلی'},{id:'b',name:'صندوق فرعی'}],'صندوق'),''));
+check('cash substring never auto selects',()=>assert.equal(paymentAccountMatch([{id:'a',name:'صندوقچه'}],'صندوق'),''));
+check('exact cash account wins',()=>assert.equal(paymentAccountMatch([{id:'a',name:'صندوق'},{id:'b',name:'صندوق اصلی'}],'صندوق'),'a'));
+check('duplicate exact accounts require choice',()=>assert.equal(paymentAccountMatch([{id:'a',name:'صندوق'},{id:'b',name:'صندوق'}],'صندوق'),''));
+check('whitespace account never auto selects',()=>assert.equal(paymentAccountMatch([{id:'a',name:'صندوق'}],'  '),''));
+console.log('PASS aborted read');
+ console.log(`PASS ${count} checks`);
+})().catch(e=>{console.error(e);process.exitCode=1;});

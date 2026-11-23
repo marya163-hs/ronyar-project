@@ -1,0 +1,28 @@
+{
+  "id": "/",
+  "name": "رانیار | RANYAR",
+  "short_name": "رانیار",
+  "description": "دستیار حسابداری فروشگاه؛ متصل به حساب آنلاین شما",
+  "lang": "fa",
+  "dir": "rtl",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#123c35",
+  "prefer_related_applications": false,
+  "icons": [
+    {
+      "src": "/icons/ranyar-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/ranyar-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

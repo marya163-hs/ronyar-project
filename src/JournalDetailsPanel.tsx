@@ -1,0 +1,20 @@
+import { formatStoreMoney, storeMoneyUnit } from "./storeMoney";
+import AccountCodeDetails from "./AccountCodeDetails";
+import { journalDescription } from "./journalDescription";
+import { useEffect, useState } from "react";
+import FormDrawer from "./FormDrawer";
+import { jalaliText } from "./jalaliDate";
+import { journalKindLabel } from "./journalKinds";
+import CashReversalForm from "./CashReversalForm";
+import { ApiError, errorText, formatDecimal, getJournal } from "./api";
+import type { Business, JournalDetails } from "./api";
+type Props = { business: Business; entryId: string; onClose: () => void; onChanged?: () => void; onSessionExpired: () => void };
+export default function JournalDetailsPanel({ business, entryId, onClose, onSessionExpired, onChanged }: Props) {
+  const [busy, setBusy] = useState(false);
+  const [entry, setEntry] = useState<JournalDetails | null>(null), [loading, setLoading] = useState(true), [error, setError] = useState(""), [retry, setRetry] = useState(0);
+  useEffect(() => { const controller = new AbortController(); setEntry(null); setError(""); setLoading(true); getJournal(business.id, entryId, controller.signal).then(value => { if (!controller.signal.aborted) setEntry(value); }).catch(cause => { if (!controller.signal.aborted) { setError(errorText(cause)); if (cause instanceof ApiError && cause.status === 401) onSessionExpired(); } }).finally(() => { if (!controller.signal.aborted) setLoading(false); }); return () => controller.abort(); }, [business.id, entryId, retry]);
+  return <FormDrawer title="جزئیات سند حسابداری" busy={busy} onClose={() => { if (!busy) onClose(); }}><section className="product-form-panel sale-details-panel">{loading && <p role="status">در حال دریافت سند…</p>}{error && <div className="notice error" role="alert">{error}<button type="button" className="text-button" onClick={() => setRetry(value => value + 1)}>تلاش دوباره</button></div>}
+    {entry && <><dl className="invoice-meta"><div><dt>شماره سند</dt><dd>{entry.entryNumber ? formatDecimal(entry.entryNumber) : "بدون شماره"}</dd></div><div><dt>تاریخ (شمسی)</dt><dd><bdi>{jalaliText(entry.documentDate)}</bdi></dd></div><div><dt>وضعیت</dt><dd>ثبت قطعی</dd></div><div><dt>نوع سند</dt><dd>{journalKindLabel(entry.kind)}</dd></div><div><dt>تراز سند</dt><dd>{entry.isBalanced ? "تراز" : "نامتوازن"}</dd></div></dl><p className="invoice-notes">شرح: {journalDescription(entry.description)}</p>{entry.reversalOfId && <p className="muted">این سند برای برگشت یک سند قبلی ثبت شده است.</p>}<p className="muted">ارقام به {storeMoneyUnit(business)}</p>
+    {entry.lines.map(line => <article className="sale-line-card" key={line.id}><strong>{formatDecimal(String(line.lineNumber))}. {line.account.name}</strong><AccountCodeDetails code={line.account.code} /><dl className="invoice-meta"><div><dt>بدهکار</dt><dd><bdi>{formatStoreMoney(business, line.debit)}</bdi></dd></div><div><dt>بستانکار</dt><dd><bdi>{formatStoreMoney(business, line.credit)}</bdi></dd></div>{line.party && <div><dt>طرف‌حساب</dt><dd>{line.party.name}</dd></div>}</dl>{line.description && <p className="invoice-notes">{journalDescription(line.description)}</p>}</article>)}
+    <dl className="invoice-meta invoice-totals"><div><dt>جمع بدهکار</dt><dd><bdi>{formatStoreMoney(business, entry.totalDebit)}</bdi></dd></div><div><dt>جمع بستانکار</dt><dd><bdi>{formatStoreMoney(business, entry.totalCredit)}</bdi></dd></div></dl>{entry.reversalEntry && <p className="notice">{"\u0633\u0646\u062f \u0628\u0631\u06af\u0634\u062a: "}{entry.reversalEntry.entryNumber ? formatDecimal(entry.reversalEntry.entryNumber) : entry.reversalEntry.id}</p>}{entry.kind === "NORMAL" && entry.cashOperationKind && !entry.reversalOfId && !entry.reversalEntry && <CashReversalForm key={`${business.id}:${entry.id}`} business={business} entry={entry} onBusyChange={setBusy} onSessionExpired={onSessionExpired} onReversed={() => { setRetry(value => value + 1); onChanged?.(); }} />}</>}<div className="form-actions"><button type="button" className="secondary" disabled={busy} onClick={() => { if (!busy) onClose(); }}>بستن سند</button></div></section></FormDrawer>;
+}

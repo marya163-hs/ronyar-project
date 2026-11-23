@@ -1,0 +1,28 @@
+.reports-center,.operational-report{display:grid;gap:20px;min-width:0}.reports-group{display:grid;gap:12px}.reports-group h3{font-size:15px;color:#203854;margin:0}.reports-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.reports-card{display:flex;flex-direction:column;align-items:stretch;text-align:right;gap:12px;background:#fff;border:1px solid #d9e5ea;border-radius:16px;padding:22px;color:#1c3655;min-height:160px;cursor:pointer;box-shadow:0 4px 16px #1d365305}.reports-card:hover{border-color:#719fb3;background:#f6fafc}.reports-card:focus-visible{outline:3px solid #417f99;outline-offset:3px}.reports-card strong{font-size:16px}.reports-card span{font-size:12px;color:#617d89;line-height:1.9}.reports-card small{margin-top:auto;font-size:12px;color:#1d4b80}.reports-back{display:flex;gap:14px;align-items:center;flex-wrap:wrap}.reports-back span{font-size:12px;color:#63808c}.reports-filter{display:flex;align-items:end;gap:14px;flex-wrap:wrap;padding:20px}.reports-filter>label{display:grid;gap:7px;min-width:175px;font-size:12px}.reports-filter select{min-height:44px}.reports-filter>.reports-check{display:flex;align-items:center;gap:8px;min-width:auto;align-self:center}.reports-check input{width:18px;height:18px;margin:0}.reports-filter>.jalali-date-field{min-width:200px;flex:1;max-width:300px}.reports-context{font-size:12px;color:#5c7b88;line-height:2;padding:0 20px;margin:0 0 16px}.reports-table-scroll{overflow:auto}.reports-table{min-width:760px}.reports-table td{font-variant-numeric:tabular-nums;white-space:nowrap}.reports-mobile-rows{display:none}.reports-mobile-row{padding:18px;display:grid;gap:12px;border-bottom:1px solid #e2eaee}.reports-mobile-row>div{display:flex;justify-content:space-between;gap:20px;font-size:12px}.reports-mobile-row span{color:#617e8a}.reports-mobile-row strong{overflow-wrap:anywhere;text-align:left}.reports-mobile-row button{width:100%}@media(max-width:1050px){.reports-cards{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:760px){.reports-cards{grid-template-columns:1fr}.reports-card{min-height:140px;padding:18px}.reports-table-scroll{display:none}.reports-mobile-rows{display:grid}.reports-filter{padding:16px;align-items:stretch;gap:16px}.reports-filter>label,.reports-filter>.jalali-date-field{flex:1 1 100%;max-width:none}.reports-filter>button{flex:1}.reports-back{align-items:flex-start;flex-direction:column}.reports-context{padding:0 16px}}
+
+.reports-category-links{display:grid;gap:10px}.reports-category-links .reports-card{min-height:120px;padding:16px}.reports-cards>.base-panel{min-width:0;padding:18px}.reports-cards>.base-panel>h3{margin:0 0 16px;font-size:17px}.reports-filter input:not([type=checkbox]){min-height:44px}
+
+/* Keep report actions compact instead of inheriting the global full-width button. */
+.reports-filter>.primary,.reports-filter>.secondary{width:auto;flex:0 0 auto;align-self:center;white-space:nowrap}
+.reports-check input{min-height:0;padding:0;flex:0 0 18px;accent-color:#163f6f}
+.reports-filter>.jalali-date-field{min-width:190px;flex:0 1 240px;max-width:280px}
+.reports-center .base-head-title h2{font-size:20px}
+@media(min-width:961px){
+ .reports-center,.operational-report{gap:14px}
+ .reports-filter{gap:10px;padding:14px 18px}
+ .reports-filter>label{min-width:155px}
+ .reports-filter>.reports-check{min-width:auto}
+ .reports-cards{gap:12px}
+ .reports-cards>.base-panel{padding:14px}
+ .reports-cards>.base-panel>h3{font-size:15px;margin-bottom:12px}
+ .reports-category-links .reports-card{min-height:100px;padding:12px;gap:8px}
+ .reports-card strong{font-size:14px}
+ .reports-context{padding-inline:18px;margin-bottom:12px}
+ .reports-center .section-toolbar h2{font-size:18px}
+}
+@media(max-width:760px){
+ .reports-filter>.jalali-date-field{flex:1 1 100%;min-width:0;max-width:none}
+ .reports-filter>.primary,.reports-filter>.secondary{flex:1 1 100%;width:100%;min-height:44px}
+}
+
+.report-export{display:grid;gap:10px}.report-export-buttons{display:flex;gap:10px;flex-wrap:wrap}.report-export .reports-context{padding:0;margin:0}.report-export-buttons>.secondary{width:auto;min-height:40px;font-size:12px}@media(max-width:760px){.report-export-buttons>.secondary{flex:1;min-height:44px}}

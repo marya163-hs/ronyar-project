@@ -1,0 +1,35 @@
+import ProductRecipeForm from "./ProductRecipeForm";
+import { formatStoreMoney, storeMoneyUnit } from "./storeMoney";
+import ProductForm from "./ProductForm";
+import { useEffect, useMemo, useState } from "react";
+import { ApiError, errorText, formatDecimal, listProducts } from "./api";
+import type { Business, Product, ProductPage, ProductStatus } from "./api";
+import { BaseHeader, BaseStats, BasePanel, BaseEmpty, BaseBadge, BasePagination, filterText } from "./BaseUi";
+
+type Props = { business: Business; onSessionExpired: () => void };
+export default function Products({ business, onSessionExpired }: Props) {
+  const [recipeProduct,setRecipeProduct]=useState<Product|null>(null);
+  const [form, setForm] = useState<{ product: Product | null } | null>(null);
+  const [status, setStatus] = useState<ProductStatus>("ACTIVE"), [type, setType] = useState<"ALL" | "GOODS" | "SERVICE">("ALL"), [query, setQuery] = useState(""), [page, setPage] = useState(1), [retry, setRetry] = useState(0);
+  const [result, setResult] = useState<ProductPage | null>(null), [loading, setLoading] = useState(false), [error, setError] = useState("");
+  useEffect(() => { const controller = new AbortController(); setResult(null); setError(""); setLoading(true); listProducts(business.id, status, page, controller.signal).then(value => { if (!controller.signal.aborted) { if (value.totalPages > 0 && page > value.totalPages) setPage(value.totalPages); else setResult(value); } }).catch(cause => { if (!controller.signal.aborted) { setError(errorText(cause)); if (cause instanceof ApiError && cause.status === 401) onSessionExpired(); } }).finally(() => { if (!controller.signal.aborted) setLoading(false); }); return () => controller.abort(); }, [business.id, status, page, retry]);
+  const rows = result?.items ?? [];
+  const shown = useMemo(() => (result?.items ?? []).filter(item => (type === "ALL" || item.kind === type) && filterText(`${item.name} ${item.code} ${item.barcode ?? ""} ${item.category?.name ?? ""}`).includes(filterText(query))), [result, type, query]);
+  const currency = storeMoneyUnit(business);
+  return <section className="base-page base-has-mobile-cards">
+    <BaseHeader title="کالا و خدمات" description="برای غذای آماده، ابتدا خدمت / محصول آماده بسازید؛ سپس دستور مصرف آن را تعریف کنید." action={() => setForm({ product: null })} actionLabel="کالا یا خدمت جدید" secondary={<button type="button" className="secondary base-refresh" disabled={loading} onClick={() => setRetry(v => v + 1)}>↻ به‌روزرسانی</button>} />
+    <BaseStats items={[{ label: "تعداد در وضعیت انتخابی", value: result?.total ?? "—", hint: "همه صفحات، بدون فیلتر نوع و جستجو" }, { label: "کالاهای همین صفحه", value: result ? rows.filter(p => p.kind === "GOODS").length : "—", hint: "فقط رکوردهای دریافت‌شده" }, { label: "خدمات همین صفحه", value: result ? rows.filter(p => p.kind === "SERVICE").length : "—", hint: "فقط رکوردهای دریافت‌شده" }]} />
+    <BasePanel title="فهرست کالاها و خدمات" note="جستجو و فیلتر نوع، فقط روی همین صفحه انجام می‌شوند.">
+      <div className="base-filters"><label className="base-search">جستجو در این صفحه<input type="search" placeholder="نام کالا، کد یا بارکد…" value={query} onChange={e => setQuery(e.target.value)} /></label>
+        <label>نوع<select value={type} onChange={e => setType(e.target.value as typeof type)}><option value="ALL">کالا و خدمت</option><option value="GOODS">فقط کالا</option><option value="SERVICE">فقط خدمت</option></select></label>
+        <label>وضعیت<select value={status} onChange={e => { setStatus(e.target.value as ProductStatus); setPage(1); setQuery(""); }}><option value="ACTIVE">فعال</option><option value="INACTIVE">غیرفعال</option><option value="ALL">همه</option></select></label></div>
+      <div className="base-meta"><span>{result ? `${formatDecimal(String(shown.length))} مورد نمایشی در این صفحه` : "در حال دریافت اطلاعات"}</span><span>قیمت فروش به {currency}</span></div>
+      {loading && <div className="base-loading" role="status">در حال بارگذاری کالاها…</div>}{error && <div className="notice error" role="alert">{error}<button className="text-button" onClick={() => setRetry(v => v + 1)}>تلاش دوباره</button></div>}
+      {result && (shown.length ? <><div className="base-table-scroll"><table className="base-table"><thead><tr><th>کالا یا خدمت</th><th>کد / بارکد</th><th>واحد</th><th>قیمت فروش</th><th>وضعیت</th><th>عملیات</th></tr></thead><tbody>{shown.map(item => <tr key={item.id}><td><div className="base-main-cell"><span className="base-row-avatar" aria-hidden="true">{item.kind === "SERVICE" ? "خ" : "ک"}</span><span><strong>{item.name}</strong><small>{item.recipe ? "محصول ترکیبی" : item.kind === "GOODS" ? "کالا" : "خدمت / محصول آماده"}{item.category ? ` · ${item.category.name}` : ""}</small></span></div></td><td><bdi>{item.code}</bdi>{item.barcode && <small className="base-subcode">بارکد: <bdi>{item.barcode}</bdi></small>}</td><td>{item.unit.name}</td><td className="base-money"><bdi>{formatStoreMoney(business, item.salePrice)}</bdi> <small>{currency}</small></td><td><BaseBadge active={item.isActive}/></td><td><button type="button" className="secondary base-row-edit" disabled={form !== null} onClick={() => setForm({ product: item })}>ویرایش / غیرفعال‌سازی</button>{item.kind==="SERVICE"&&<button type="button" className="secondary" onClick={()=>setRecipeProduct(item)}>دستور مصرف</button>}</td></tr>)}</tbody></table></div>
+        <div className="base-mobile-list">{shown.map(item => <article className="base-mobile-card" key={item.id}><div className="base-mobile-card-top"><strong>{item.name}</strong><BaseBadge active={item.isActive}/></div><small>{item.recipe ? "محصول ترکیبی" : item.kind === "GOODS" ? "کالا" : "خدمت / محصول آماده"} · {item.unit.name} · <bdi>{item.code}</bdi></small><div className="base-mobile-price"><span>قیمت فروش</span><strong><bdi>{formatStoreMoney(business, item.salePrice)}</bdi> {currency}</strong></div><button className="secondary" type="button" disabled={form !== null} onClick={() => setForm({product:item})}>ویرایش / غیرفعال‌سازی</button>{item.kind==="SERVICE"&&<button type="button" className="secondary" onClick={()=>setRecipeProduct(item)}>دستور مصرف</button>}</article>)}</div></> : <BaseEmpty title={rows.length ? "نتیجه‌ای برای این جستجو نیست" : "کالا یا خدمتی یافت نشد"} description={rows.length ? "عبارت جستجو یا فیلتر نوع را تغییر دهید." : "فیلترها را تغییر دهید یا کالای جدید ثبت کنید."}/>)}
+      {result && <BasePagination page={page} totalPages={result.totalPages} loading={loading} onChange={setPage}/>}
+    </BasePanel>
+    {recipeProduct&&<ProductRecipeForm business={business} product={recipeProduct} onSessionExpired={onSessionExpired} onClose={()=>setRecipeProduct(null)} onSaved={()=>{setRecipeProduct(null);setRetry(v=>v+1);}}/>}
+    {form && <ProductForm key={form.product?.id ?? "new"} business={business} product={form.product} onSessionExpired={onSessionExpired} onSaved={() => { setForm(null); setResult(null); setRetry(v => v + 1); }} onCancel={() => { setForm(null); setRetry(v => v + 1); }} />}
+  </section>;
+}

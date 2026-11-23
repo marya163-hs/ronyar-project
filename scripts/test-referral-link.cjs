@@ -1,0 +1,11 @@
+const assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm'),ts=require('typescript'),path=require('node:path');
+const source=fs.readFileSync(path.join(__dirname,'../src/referralLink.ts'),'utf8'),code=ts.transpileModule(source,{compilerOptions:{module:ts.ModuleKind.CommonJS}}).outputText;
+let n=0;const eq=(a,b)=>{assert.equal(a,b);n++;};
+function setup(href,stored,blocked=false){let url=new URL(href),saved=stored===undefined?null:JSON.stringify(stored);const api={};const storage={getItem:()=>{if(blocked)throw Error('blocked');return saved;},setItem:(_,v)=>{if(blocked)throw Error('blocked');saved=v;},removeItem:()=>{if(blocked)throw Error('blocked');saved=null;}};const location={get href(){return url.href;},get origin(){return url.origin;}};const history={replaceState:(_,__,next)=>{url=new URL(next,url);}};vm.runInNewContext(code,{exports:api,URL,Date,Number,JSON,location,history,sessionStorage:storage});return {api,url:()=>url,saved:()=>saved};}
+for(const value of ['A1B2C3D4E5','a1b2c3d4e5',' a1b2c3d4e5 ']){const env=setup('https://ronyar.ir/?ref='+encodeURIComponent(value)+'#register');eq(env.api.readReferralCode(),'A1B2C3D4E5');eq(JSON.parse(env.saved()).code,'A1B2C3D4E5');}
+for(const value of ['bad','<script>','A'.repeat(11),'']){const env=setup('https://ronyar.ir/?ref='+encodeURIComponent(value),{code:'A1B2C3D4E5',at:Date.now()});eq(env.api.readReferralCode(),'');eq(env.saved(),null);}
+let env=setup('https://ronyar.ir/#login',{code:'A1B2C3D4E5',at:Date.now()-1000});eq(env.api.readReferralCode(),'A1B2C3D4E5');
+for(const at of [Date.now()-8*86400000,Date.now()+86400000,'bad']){env=setup('https://ronyar.ir/',{code:'A1B2C3D4E5',at});eq(env.api.readReferralCode(),'');}
+env=setup('https://ronyar.ir/?ref=A1B2C3D4E5&utm_source=instagram#register');env.api.readReferralCode();env.api.clearReferralCode();eq(env.url().searchParams.has('ref'),false);eq(env.url().searchParams.get('utm_source'),'instagram');eq(env.url().hash,'#register');eq(env.saved(),null);
+env=setup('https://ronyar.ir/?ref=A1B2C3D4E5#register',undefined,true);eq(env.api.readReferralCode(),'A1B2C3D4E5');eq(env.api.referralLink('A1B2C3D4E5'),'https://ronyar.ir/?ref=A1B2C3D4E5#register');
+console.log(`PASS ${n} referral link checks (URL, tab storage, expiry, removal and blocked storage)`);
